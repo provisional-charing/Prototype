@@ -1,0 +1,147 @@
+
+<head>
+  <style>
+
+    *{
+      margin-top: 0;
+      margin-left: 0;
+      padding-left: 0;
+      padding-top: 0;
+
+    }
+    #SeitenfensterLinks{
+
+      margin: 13% 0;
+      padding: 10px 10px 20px 30px;
+      background: rgba(255,255,255, .35);
+      width: 180px;
+      float:left;
+      bottom: 2em;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      z-index: 1;
+    }
+
+    #menu{
+      opacity: 100%;
+      color: white;
+      padding: 10px 0px 0px 0px;
+    }
+
+    #menuLink *{
+      text-decoration: none;
+      color: white;
+      line-height: 2.0em;
+      font-size: 1.6em ;
+      font-family: "Segoe UI Light";
+
+    }
+
+    /* Laufschrift*/
+    #laufsch
+    {
+      padding-bottom: 5px;
+      margin-top: 5px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      position: fixed; bottom: 0em;
+      border-color: white;
+      border-bottom-color: transparent;
+      border-width: 1px;
+      border-style: solid;
+      font-family: "Segoe UI Semibold";
+      width: 99.9%;
+      height: 1em;
+      color: #ffffff;
+      text-align: center; font-style: normal; font-size: 20px;
+      z-index: 3;
+    }
+
+    #gesamtesFenster{
+
+      overflow: hidden;
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%,-40%);
+      z-index: -1;
+    }
+
+    #tabellenPlatz{
+      height: 85vh;
+      width: 80vw ;
+      margin: 3%;
+      background: rgba(255,255,255, .35);
+      float: right;
+      border-radius: 10px;
+      z-index: 1;
+
+      overflow: auto;
+      scroll-behavior: auto;
+    }
+
+
+    #inhalt{
+      margin-left: 3vw;
+      margin-top: 2vh;
+      color: white;
+
+    }
+
+      #wikiTitle{
+        margin-top: 2vh;
+        margin-left: 2vw;
+        color: white;
+        font-family: "Segoe UI Semilight";
+        font-size: 1.8em;
+        text-decoration: underline;
+      }
+
+  </style>
+
+
+</head>
+
+<div id="gesamtesFenster">
+  <%= image_tag "impfpassBackground.jpg", class: "testIcon" %>
+</div>
+
+<div id="laufsch">
+  <marquee position="bottom" direction="left" bgcolor="transparent" scrollamount="10" scrolldelay="100">*****NEWS********NEWS************NEWS********NEWS***********NEWS********NEWS********</marquee>
+</div>
+
+<div id="SeitenfensterLinks">
+  <div id="menu">
+
+    <ul>
+      <li id="menuLink" ><a href="">Accountinfo</a> </li>
+      <li id="menuLink"><a href="http://localhost:3000/main">Home</a></li>
+      <li id="menuLink"><a href="http://localhost:3000/impfpass">Impfpass</a></li>
+      <li id="menuLink"><a href="#">Notizen</a></li>
+      <li id="menuLink"><a href="#">soziale Projekte</a></li>
+      <li id="menuLink"><a href=" ">Kompedium</a></li>
+    </ul>
+  </div>
+
+</div>
+<!-- div mit combobox für die Auswahl -->
+<div id="tabellenPlatz">
+
+  <div id="wikiTitle">Kompedium</div>
+  <div id="inhalt">
+    <ul>
+      <li id="menuLink"><a href="http://localhost:3000/gelbfieber">Gelbfieber</a></li>
+      <li id="menuLink"><a href="http://localhost:3000/main">Influenza</a></li>
+      <li id="menuLink"><a href="http://localhost:3000/impfpass">Keuchhusten</a></li>
+      <li id="menuLink"><a href="#">Malaria</a></li>
+      <li id="menuLink"><a href="#">Mumps</a></li>
+      <li id="menuLink"><a href="http://localhost:3000/wikiMain">Tetanus</a></li>
+      <li id="menuLink"><a href="http://localhost:3000/wikiMain">Tollwut</a></li>
+      <li id="menuLink"><a href="http://localhost:3000/wikiMain">Windpocken</a></li>
+    </ul>
+  </div>
+
+</div>
+
+
+</html>
