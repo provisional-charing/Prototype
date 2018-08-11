@@ -130,8 +130,8 @@
   <div id="wikiTitle">Kompedium</div>
   <div id="inhalt">
     <ul>
-      <% @diseases.each do |d| %>
-         <li id="menuLink"><%= link_to d.name d%></li>
+      <% @diseases.each do |disease| %>
+         <li id="menuLink"><%= link_to disease.name, disease%></li>
       <% end %>
     </ul>
   </div>

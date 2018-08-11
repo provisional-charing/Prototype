@@ -63,7 +63,7 @@ class DiseasesController < ApplicationController
   end
 
   def wikiMain_page
-
+    @diseases = Disease.all
   end
 
   private
