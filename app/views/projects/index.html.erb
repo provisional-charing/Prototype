@@ -13,6 +13,7 @@
       <th>Aim</th>
       <th>Target group</th>
       <th>Financial support needed</th>
+      <th>Link to Project page</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -28,6 +29,7 @@
         <td><%= project.aim %></td>
         <td><%= project.target_group %></td>
         <td><%= project.financial_support_needed %></td>
+        <td><%= project.link %></td>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
         <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
