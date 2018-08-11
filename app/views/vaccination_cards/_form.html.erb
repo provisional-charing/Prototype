@@ -1,0 +1,72 @@
+<%= form_for(vaccination_card) do |f| %>
+  <% if vaccination_card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vaccination_card.errors.count, "error") %> prohibited this vaccination_card from being saved:</h2>
+
+      <ul>
+      <% vaccination_card.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :vaccination_id %>
+    <%= f.text_field :vaccination_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :get_date %>
+    <%= f.date_select :get_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :injection_type %>
+    <%= f.text_field :injection_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dosis_e %>
+    <%= f.text_field :dosis_e %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dosis_ml %>
+    <%= f.text_field :dosis_ml %>
+  </div>
+
+  <div class="field">
+    <%= f.label :typ %>
+    <%= f.text_field :typ %>
+  </div>
+
+  <div class="field">
+    <%= f.label :charge_number %>
+    <%= f.text_field :charge_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :doctor %>
+    <%= f.text_field :doctor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :test %>
+    <%= f.text_field :test %>
+  </div>
+
+  <div class="field">
+    <%= f.label :reaktion %>
+    <%= f.text_field :reaktion %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :vaccination_cards
   resources :vaccinations
   resources :projects
   resources :diseases

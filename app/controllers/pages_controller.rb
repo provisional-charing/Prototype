@@ -17,7 +17,7 @@ def login_page
 end
 
 def impfpass_page
-
+  @vaccinations=current_user.vaccination_cards
 end
 
 def pdf

@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vaccination:</strong>
+  <%= @vaccination_card.vaccination %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @vaccination_card.user %>
+</p>
+
+<p>
+  <strong>Get date:</strong>
+  <%= @vaccination_card.get_date %>
+</p>
+
+<p>
+  <strong>Injection type:</strong>
+  <%= @vaccination_card.injection_type %>
+</p>
+
+<p>
+  <strong>Dosis e:</strong>
+  <%= @vaccination_card.dosis_e %>
+</p>
+
+<p>
+  <strong>Dosis ml:</strong>
+  <%= @vaccination_card.dosis_ml %>
+</p>
+
+<p>
+  <strong>Typ:</strong>
+  <%= @vaccination_card.typ %>
+</p>
+
+<p>
+  <strong>Charge number:</strong>
+  <%= @vaccination_card.charge_number %>
+</p>
+
+<p>
+  <strong>Doctor:</strong>
+  <%= @vaccination_card.doctor %>
+</p>
+
+<p>
+  <strong>Test:</strong>
+  <%= @vaccination_card.test %>
+</p>
+
+<p>
+  <strong>Reaktion:</strong>
+  <%= @vaccination_card.reaktion %>
+</p>
+
+<%= link_to 'Edit', edit_vaccination_card_path(@vaccination_card) %> |
+<%= link_to 'Back', vaccination_cards_path %>

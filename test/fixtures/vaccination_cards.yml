@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vaccination: one
+  user: one
+  get_date: 2018-08-11
+  injection_type: 
+  dosis_e: 
+  dosis_ml: 
+  typ: MyString
+  charge_number: MyString
+  doctor: MyString
+  test: MyString
+  reaktion: MyString
+
+two:
+  vaccination: two
+  user: two
+  get_date: 2018-08-11
+  injection_type: 
+  dosis_e: 
+  dosis_ml: 
+  typ: MyString
+  charge_number: MyString
+  doctor: MyString
+  test: MyString
+  reaktion: MyString

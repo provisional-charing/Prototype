@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Vaccination Cards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vaccination</th>
+      <th>User</th>
+      <th>Get date</th>
+      <th>Injection type</th>
+      <th>Dosis e</th>
+      <th>Dosis ml</th>
+      <th>Typ</th>
+      <th>Charge number</th>
+      <th>Doctor</th>
+      <th>Test</th>
+      <th>Reaktion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vaccination_cards.each do |vaccination_card| %>
+      <tr>
+        <td><%= vaccination_card.vaccination %></td>
+        <td><%= vaccination_card.user %></td>
+        <td><%= vaccination_card.get_date %></td>
+        <td><%= vaccination_card.injection_type %></td>
+        <td><%= vaccination_card.dosis_e %></td>
+        <td><%= vaccination_card.dosis_ml %></td>
+        <td><%= vaccination_card.typ %></td>
+        <td><%= vaccination_card.charge_number %></td>
+        <td><%= vaccination_card.doctor %></td>
+        <td><%= vaccination_card.test %></td>
+        <td><%= vaccination_card.reaktion %></td>
+        <td><%= link_to 'Show', vaccination_card %></td>
+        <td><%= link_to 'Edit', edit_vaccination_card_path(vaccination_card) %></td>
+        <td><%= link_to 'Destroy', vaccination_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vaccination Card', new_vaccination_card_path %>
