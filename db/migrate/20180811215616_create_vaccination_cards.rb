@@ -4,9 +4,9 @@ class CreateVaccinationCards < ActiveRecord::Migration[5.0]
       t.references :vaccination, foreign_key: true
       t.references :user, foreign_key: true
       t.date :get_date
-      t.int :injection_type
-      t.double :dosis_e
-      t.double :dosis_ml
+      t.integer :injection_type
+      t.float :dosis_e
+      t.float :dosis_ml
       t.string :typ
       t.string :charge_number
       t.string :doctor
