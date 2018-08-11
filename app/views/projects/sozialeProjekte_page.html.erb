@@ -136,6 +136,19 @@
 
     <h2>aktuelle Projekte</h2>
 
+    <table>
+      <thead></thead>
+      <tbody>
+        <% @projects.each do |project| %>
+        <tr>
+          <td><%= project.project_name %><td>
+          <td><%= project.s_description %><td>
+          <td><% if project.link_is_accessable?  %><%= link_to "goto official page", project.link, target: "_blank" %><% else %> no active link <% end %><td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+
   </div>
 </div>
 

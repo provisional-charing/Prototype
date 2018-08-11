@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  disease: one
+  duration: 1
+  e_information: MyText
+
+two:
+  disease: two
+  duration: 1
+  e_information: MyText
