@@ -1,0 +1,189 @@
+
+<head>
+  <style>
+
+    *{
+      margin-top: 0;
+      margin-left: 0;
+      padding-left: 0;
+      padding-top: 0;
+
+    }
+    #SeitenfensterLinks{
+
+      margin: 13% 0;
+      padding: 10px 10px 20px 30px;
+      background: rgba(255,255,255, .35);
+      width: 180px;
+      float:left;
+      bottom: 2em;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      z-index: 1;
+    }
+
+    #menu{
+      opacity: 100%;
+      color: white;
+      padding: 10px 0px 0px 0px;
+    }
+
+    #menuLink *{
+      text-decoration: none;
+      color: white;
+      line-height: 2.0em;
+      font-size: 1.6em ;
+      font-family: "Segoe UI Light";
+
+    }
+
+    #anker{
+      text-decoration: none;
+      color: white;
+      font-size: 16pt ;
+      font-family: "Segoe UI Semilight";
+    }
+
+    /* Laufschrift*/
+    #laufsch
+    {
+      padding-bottom: 5px;
+      margin-top: 5px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      position: fixed; bottom: 0em;
+      border-color: white;
+      border-bottom-color: transparent;
+      border-width: 1px;
+      border-style: solid;
+      font-family: "Segoe UI Semibold";
+      width: 99.9%;
+      height: 1em;
+      color: #ffffff;
+      text-align: center; font-style: normal; font-size: 20px;
+      z-index: 3;
+    }
+
+    #gesamtesFenster{
+
+      overflow: hidden;
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%,-40%);
+      z-index: -1;
+    }
+
+    #tabellenPlatz{
+      height: 85vh;
+      width: 80vw ;
+      margin: 3%;
+      background: rgba(255,255,255, .35);
+      float: right;
+      border-radius: 10px;
+      z-index: 1;
+
+      overflow: auto;
+    }
+
+
+    #inhalt{
+      margin-left: 3.5vw;
+      margin-top: 2vh;
+      margin-right: 3.5vw;
+      color: white;
+      font-size: 14pt;
+      line-height: 20pt;
+      font-family: "Segoe UI Semilight";
+    }
+
+    #register{
+      margin-left: 3vw;
+      margin-top: 2vh;
+      color: white;
+      text-align: left;
+      border: solid 1px white;
+      border-radius: 10px;
+      padding: 10pt 0pt 16pt 10pt ;
+      line-height: 20pt;
+    }
+
+      #wikiTitle{
+        margin-top: 2vh;
+        margin-left: 2vw;
+        color: white;
+        font-family: "Segoe UI Semilight";
+        font-size: 25pt;
+        text-decoration: underline;
+      }
+
+  </style>
+
+
+</head>
+
+<div id="gesamtesFenster">
+  <%= image_tag "impfpassBackground.jpg", class: "testIcon" %>
+</div>
+
+<div id="laufsch">
+  <marquee position="bottom" direction="left" bgcolor="transparent" scrollamount="10" scrolldelay="100">*****NEWS********NEWS************NEWS********NEWS***********NEWS********NEWS********</marquee>
+</div>
+
+<div id="SeitenfensterLinks">
+  <div id="menu">
+
+    <ul>
+      <li id="menuLink" ><a href="">Accountinfo</a> </li>
+      <li id="menuLink"><a href="http://localhost:3000/main">Home</a></li>
+      <li id="menuLink"><a href="http://localhost:3000/impfpass">Impfpass</a></li>
+      <li id="menuLink"><a href="#">Notizen</a></li>
+      <li id="menuLink"><a href="#">soziale Projekte</a></li>
+      <li id="menuLink"><a href="http://localhost:3000/wikiMain">Kompedium</a></li>
+    </ul>
+  </div>
+
+</div>
+<!-- div mit combobox für die Auswahl -->
+<div id="tabellenPlatz">
+
+  <div id="wikiTitle">Gelbfieber</div>
+
+<br>
+  <div id="register">
+  <a href="#Anker11" id="anker">1.1 Was ist Gelbfieber?</a><br>
+  <a href="#Anker12" id="anker">1.2 Wie infiziert man sich?</a><br>
+  <a href="#Anker13" id="anker">1.3 Symptome</a><br>
+  <a href="#Anker14" id="anker">1.4 Vorbeugung und Bekämpfung</a><br>
+  </div>
+
+  <div id="inhalt">
+  <br><h2 id="Anker11">1.1 Was ist Gelbfieber?</h2>
+  Gelbfieber wird verursacht durch das Gelbfieber Virus. Übertragen wird es durch Mücken, die mit diesem Virus infiziert
+  sind. Verbreitet vor allem in Afrika und Südamerika. man unterscheidet in Dschungel Gelbfieber und Stadt Gelbfieber,
+  je nachdem wie und wo man infiziert wird.<br><br>
+
+    <br><h2 id="Anker12">1.2 Wie infiziert man sich?</h2>
+  Bei beiden Varianten sind Tiere der Ursprung. Bei dem Dschungel Gelbfieber können z.B. Affen sein, die infiziert sind.
+  Daraufhin wird der Virus von Stechmücken an den dort lebenden Menschen übertragen. Bei dem Stadt Gelbfieber besitzt ein
+  Mensch diesen Virus den er z.B. aus anderen Ländern mitgebracht hat. Dieser kann dann auch wieder über Stechmücken <
+  übertragen werden<br><br>
+
+    <br><h2 id="Anker13">1.3 Symptome</h2>
+  Die Symptome erscheinen binnen 3 bis 6 Tagen nach der Ansteckung. Gelbfieber verläuft in vielen Fällen wie eine Grippe.
+  Typisch wäre in diesem Fall: Fieber, Kopfschmerzen, Gliederschmerzen, Muskelschmerzen, Schüttelfrost, Übelkeit und
+  Erbrechen. Nach einigen Tagen ist Krankheit meistens vorüber. Bei schlimmeren Fällen tritt folgendes auf: Erbrechen
+  von Galle, Durchfall, starker Durst, Überwärmte Haut, Unangenehmer Mundgeruch, Gaumenblutungen. Wenn es ganz schlimm
+  läuft kann es zu Leber oder Nierenschäden kommen.<br><br>
+
+    <br><h2 id="Anker14">1.4 Vorbeugung und Bekämpfung</h2>
+  Um Gelbfieber zu verhindern sollte man sich Impfen lassen. Außerdem sollte man darauf achten, dass man lange Sachen
+  an hat und Mückenschutzmittel dabei hat.  Momentan gibt es noch keine direkte Behandlung von Gelbfieber. Das einzige
+  was man behandeln kann die einzelnen Symptome. Also je nachdem ob man nun Fieber oder Schmerzen hat werden Medikamente
+  eingesetzt die die Schmerzen lindern.<br>
+  <br>
+</div>
+</div>
+
+
+</html>

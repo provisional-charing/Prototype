@@ -20,10 +20,6 @@ def impfpass_page
 
 end
 
-def wikiMain_page
-
-end
-
 def wikiGelbfieber_page
 
 end

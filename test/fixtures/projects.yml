@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_name: MyText
+  begin: 2018-08-11
+  e_duration: 1
+  s_description: MyText
+  description: MyText
+  aim: MyText
+  target_group: MyText
+  financial_support_needed: 1
+
+two:
+  project_name: MyText
+  begin: 2018-08-11
+  e_duration: 1
+  s_description: MyText
+  description: MyText
+  aim: MyText
+  target_group: MyText
+  financial_support_needed: 1

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project name:</strong>
+  <%= @project.project_name %>
+</p>
+
+<p>
+  <strong>Begin:</strong>
+  <%= @project.begin %>
+</p>
+
+<p>
+  <strong>E duration:</strong>
+  <%= @project.e_duration %>
+</p>
+
+<p>
+  <strong>S description:</strong>
+  <%= @project.s_description %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<p>
+  <strong>Aim:</strong>
+  <%= @project.aim %>
+</p>
+
+<p>
+  <strong>Target group:</strong>
+  <%= @project.target_group %>
+</p>
+
+<p>
+  <strong>Financial support needed:</strong>
+  <%= @project.financial_support_needed %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
