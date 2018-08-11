@@ -61,6 +61,10 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def sozialeProjekte_page
+    @projects = Project.all
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
