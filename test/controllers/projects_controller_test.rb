@@ -17,7 +17,7 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create project" do
     assert_difference('Project.count') do
-      post projects_url, params: { project: { aim: @project.aim, begin: @project.begin, description: @project.description, e_duration: @project.e_duration, financial_support_needed: @project.financial_support_needed, project_name: @project.project_name, s_description: @project.s_description, target_group: @project.target_group } }
+      post projects_url, params: { project: { aim: @project.aim, begin: @project.begin, description: @project.description, e_duration: @project.e_duration, financial_support_needed: @project.financial_support_needed, project_name: @project.project_name, s_description: @project.s_description, target_group: @project.target_group, link: @project.link  } }
     end
 
     assert_redirected_to project_url(Project.last)
@@ -34,7 +34,7 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update project" do
-    patch project_url(@project), params: { project: { aim: @project.aim, begin: @project.begin, description: @project.description, e_duration: @project.e_duration, financial_support_needed: @project.financial_support_needed, project_name: @project.project_name, s_description: @project.s_description, target_group: @project.target_group } }
+    patch project_url(@project), params: { project: { aim: @project.aim, begin: @project.begin, description: @project.description, e_duration: @project.e_duration, financial_support_needed: @project.financial_support_needed, project_name: @project.project_name, s_description: @project.s_description, target_group: @project.target_group, link: @project.link } }
     assert_redirected_to project_url(@project)
   end
 
