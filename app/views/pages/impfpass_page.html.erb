@@ -17,9 +17,10 @@
         <option value="Serum-Injektionen" >Serum-Injektionen </option>
         <option value="Schutzimpfungen">Schutzimpfungen</option>
       </select>
+      <%= link_to "Impfkalender", '/vaccination_information', id: "link_to_vacc_information"%>
     </div>
 
-    <div id="link_to_vacc_information"><%= link_to "Weitere Informationen", '/vaccination_information'%></div>
+    <div id="link_to_vacc_information"></div>
 
     <!-- Tabelle erstellen-->
     <div id="tabellenContainer">

@@ -1,4 +1,4 @@
-body {
+body.scaffold {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -7,20 +7,20 @@ body {
   margin: 33px;
 }
 
-p, ol, ul, td {
+p.scaffold, ol.scaffold, ul.scaffold, td.scaffold {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   margin: 33px;
 }
 
-pre {
+pre.scaffold {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
 }
 
-a {
+a.scaffold {
   color: #000;
 
   &:visited {
@@ -33,17 +33,17 @@ a {
   }
 }
 
-th {
+th.scaffold {
   padding-bottom: 5px;
 }
 
-td {
+td.scaffold {
   padding-bottom: 7px;
   padding-left: 5px;
   padding-right: 5px;
 }
 
-div {
+div.scaffold {
   &.field, &.actions {
     margin-bottom: 10px;
   }
