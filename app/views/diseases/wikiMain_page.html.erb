@@ -106,9 +106,7 @@
   <%= image_tag "impfpassBackground.jpg", class: "testIcon" %>
 </div>
 
-<div id="laufsch">
-  <marquee position="bottom" direction="left" bgcolor="transparent" scrollamount="10" scrolldelay="100">*****NEWS********NEWS************NEWS********NEWS***********NEWS********NEWS********</marquee>
-</div>
+<%= render partial: 'pages/newsline'%>
 
 <%= render partial: 'pages/leftsidepart'%>
 <!-- div mit combobox für die Auswahl -->
