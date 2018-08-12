@@ -13,3 +13,55 @@
  *= require_tree .
  *= require_self
  */
+*{
+    margin-top: 0;
+    margin-left: 0;
+    padding-left: 0;
+    padding-top: 0;
+
+}
+
+#gesamtesFenster{
+
+    overflow: hidden;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    z-index: -1;
+}
+
+#inhalt{
+    margin-left: 3vw;
+    margin-top: 2vh;
+    color: white;
+    margin-left: 3.5vw;
+    margin-top: 2vh;
+    margin-right: 3.5vw;
+    color: white;
+    font-size: 14pt;
+    line-height: 20pt;
+    font-family: "Segoe UI Semilight";
+}
+
+#wikiTitle{
+    margin-top: 2vh;
+    margin-left: 2vw;
+    color: white;
+    font-family: "Segoe UI Semilight";
+    font-size: 1.8em;
+    text-decoration: underline;
+}
+
+#tabellenPlatz{
+    height: 85vh;
+    width: 80vw ;
+    margin: 3%;
+    background: rgba(255,255,255, .35);
+    float: right;
+    border-radius: 10px;
+    z-index: 1;
+
+    overflow: auto;
+    scroll-behavior: auto;
+}

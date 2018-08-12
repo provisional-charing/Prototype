@@ -1,0 +1,27 @@
+#SeitenfensterLinks{
+
+    margin: 13% 0;
+    padding: 10px 10px 20px 30px;
+    background: rgba(255,255,255, .35);
+    width: 180px;
+    float:left;
+    bottom: 2em;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 1;
+}
+
+#menu{
+    opacity: 100%;
+    color: white;
+    padding: 10px 0px 0px 0px;
+}
+
+#menuLink *{
+    text-decoration: none;
+    color: white;
+    line-height: 2.0em;
+    font-size: 1.6em ;
+    font-family: "Segoe UI Light";
+
+}
