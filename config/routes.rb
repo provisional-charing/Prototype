@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/agb', to:'pages#agb_page'
   get '/login', to:'pages#login_page'
   get '/impfpass', to:'pages#impfpass_page'
+  get '/vaccination_information', to:'pages#vaccination_information'
   get '/VeröffentlichungsAntrag', to: 'pages#pdf' , as: :ProjectFormular
   get '/wikiMain', to:'diseases#wikiMain_page'
   get '/socialProjects', to: 'projects#sozialeProjekte_page'

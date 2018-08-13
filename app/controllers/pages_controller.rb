@@ -17,7 +17,13 @@ def login_page
 end
 
 def impfpass_page
-  @vaccinations=current_user.vaccination_cards
+  unless current_user.nil?
+    @vaccinations=current_user.vaccination_cards
+  end
+end
+
+def vaccination_information
+  # just a mock method for the html page
 end
 
 def pdf
