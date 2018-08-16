@@ -14,12 +14,12 @@
           <table>
             <tr>
               <td class="regAttribut"><%= f.label :user_name, style:"display: inline" %><span class="mandatory_field">*</span></td>
-              <td class="regAttribut"><%= f.email_field :user_name, autofocus: true, autocomplete: "off", class: "regInput" %></td>
+              <td class="regAttribut"><%= f.text_field :user_name, autofocus: true, autocomplete: "off", class: "regInput" %></td>
             </tr>
 
             <tr>
               <td class="regAttribut"><%#= f.label :first_name %>Vorname</td>
-              <td class="regAttribut"><%= f.email_field :first_name, autocomplete: "off", class: "regInput" %></td>
+              <td class="regAttribut"><%= f.text_field :first_name, autocomplete: "off", class: "regInput" %></td>
             </tr>
 
             <tr>
