@@ -281,22 +281,22 @@ body {
 
 .notiz1{
 
-    position: fixed;left: 30em;
+    position: fixed;left: 35em;
 }
 
 .notiz2{
-    position: fixed; left: 30em;top: 9em;
+    position: fixed; left: 35em;top: 9em;
 
 }
 
 .Seitenfenster3{
 
-    background: grey;
-    width: 180px;
-    height: 20px;
+    
+    width: 250px;
+    height: 30px;
     float:right;
 
-    position: fixed; margin-top: 16em;
+    position: fixed; margin-top: 40em;
 
 }
 
