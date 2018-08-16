@@ -1,0 +1,29 @@
+<div id="gesamtesFenster">
+  <%= image_tag "impfpassBackground.jpg", class: "testIcon" %>
+</div>
+
+<%= render partial: 'pages/newsline'%>
+
+<%= render partial: 'pages/leftsidepart'%>
+
+<div id="tabellenPlatz">
+
+  <div  class="notiz1">
+
+    <textarea id="noteAttribut" style="resize:none" cols="20" rows="1" placeholder="Titel"  ></textarea>
+
+  </div>
+  <div class="notiz2">
+
+    <textarea id="noteAttribut" style="resize:none" name="text" cols="75" rows="13" placeholder="Notiz"></textarea>
+    <input type="submit" value="Speichern" style="font-size: 16pt" />
+
+  </div>
+
+  <div class="Seitenfenster3">
+    <button type="button" style="font-size: 16pt">Hinzufügen</button>
+    &emsp;&nbsp; <button type="button" style="font-size: 16pt">Löschen</button>
+  </div>
+
+
+</div>
