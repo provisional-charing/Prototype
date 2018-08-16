@@ -201,7 +201,6 @@ body {
 
 }
 
-<<<<<<< HEAD
 /*Fenster Map Page btw. Test-Page*/
 #MapFenster{
     height:100%;
@@ -210,7 +209,6 @@ body {
     z-index: -1;
 }
 
-=======
 #registerContainer{
     position: absolute;
     text-align: center;
@@ -317,4 +315,3 @@ body {
     padding: 10px 10px 10px 10px;
 
 }
->>>>>>> 510b595c36b30acce0a441ec475ae8e87cb920cd
