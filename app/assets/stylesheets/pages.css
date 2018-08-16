@@ -201,3 +201,11 @@ body {
 
 }
 
+/*Fenster Map Page btw. Test-Page*/
+#MapFenster{
+    height:100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+

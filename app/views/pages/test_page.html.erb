@@ -12,16 +12,7 @@
 
     }
     #SeitenfensterLinks{
-
-      margin: 13% 0;
-      padding: 10px 10px 20px 30px;
       background: rgba(0,0,0, .35);
-      width: 180px;
-      float:left;
-      bottom: 2em;
-      border-bottom-right-radius: 10px;
-      border-top-right-radius: 10px;
-      z-index: 1;
     }
 
 
@@ -41,11 +32,7 @@
 
     }
 
-#menu{
-  opacity: 100%;
-  color: white;
-  padding: 10px 0px 0px 0px;
-}
+
 
 #menuLink *{
   text-decoration: none;
@@ -55,26 +42,6 @@
   font-family: "Segoe UI Light";
 }
 
-    /* Laufschrift*/
-    #laufsch
-    {
-      padding-bottom: 5px;
-      margin-top: 5px;
-      border-top-right-radius: 10px;
-      border-top-left-radius: 10px;
-      position: fixed; bottom: 0em;
-      border-color: white;
-      border-bottom-color: transparent;
-      border-width: 1px;
-      border-style: solid;
-      font-family: "Segoe UI Semibold";
-      width: 99.9%;
-      height: 1em;
-      color: #ffffff;
-      background: rgba(0,0,0, .35);
-      text-align: center; font-style: normal; font-size: 20px;
-      z-index: 3;
-    }
 
   #input1{
     font-size: 1.0em;
@@ -98,12 +65,7 @@
     font-family: "Segoe UI Light";
   }
 
-    #gesamtesFenster{
-      height:100vh;
-      width: 100vw;
-      position: absolute;
-      z-index: -1;
-    }
+
 
       #suche{
         width: fit-content;
@@ -128,18 +90,12 @@
       height: 100%;
     }
 
-
-    #description {
-      font-family: Roboto;
-      font-size: 15px;
-      font-weight: 300;
-    }
-
     #infowindow-content .title {
       font-weight: bold;
     }
 
     #infowindow-content {
+      font-family: "Segoe UI Light";
       display: none;
     }
 
@@ -147,46 +103,29 @@
       display: inline;
     }
 
-    .pac-card {
-      margin: 10px 10px 0 0;
-      border-radius: 2px 0 0 2px;
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      outline: none;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-      background-color: #fff;
-      font-family: Roboto;
-    }
-
-    #pac-container {
-      padding-bottom: 12px;
-      margin-right: 12px;
-    }
-
-    .pac-controls {
-      display: inline-block;
-      padding: 5px 11px;
-    }
 
     .pac-controls label {
-      font-family: Roboto;
+      font-family: "Segoe UI Light";
       font-size: 13px;
       font-weight: 300;
     }
 
     #pac-input {
       background-color: #fff;
-      font-family: Roboto;
-      font-size: 15px;
+      font-family: "Segoe UI Light";
+      font-size: 17px;
       font-weight: 300;
       margin-left: 12px;
       padding: 0 11px 0 13px;
       text-overflow: ellipsis;
       width: 400px;
+      border-radius: 10px;
+      border-style: solid;
+      margin-top: 1%;
     }
 
     #pac-input:focus {
-      border-color: #4d90fe;
+      border-color: white;
     }
 
 
@@ -196,7 +135,7 @@
 
 </head>
 
-<div id="gesamtesFenster">
+<div id="MapFenster">
 
 
   <input id="pac-input" class="controls" type="text"
@@ -217,13 +156,14 @@
 
       // This example requires the Places library. Include the libraries=places
       // parameter when you first load the API. For example:
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZLMhUcGgyrPcMynUS21Tq4IdYXTRJXeY&libraries=geometry,places";
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZLMhUcGgyrPcMynUS21Tq4IdYXTRJXeY&libraries=geometry,places,visualization";
 
       function initMap() {
           var map = new google.maps.Map(document.getElementById('map'), {
               center: {lat: 52.138949, lng: 11.645445},
               zoom: 9
           });
+
 
           var input = document.getElementById('pac-input');
 
@@ -272,6 +212,50 @@
                   infowindow.open(map, marker);
               });
           });
+
+
+          var layer = new google.maps.FusionTablesLayer({
+              query: {
+                  select: 'geometry',
+                  from: '1KiBb26UhzeNw4tDEhjLXm902y-tXt7Ii6FumC_tC',
+                  where: 'Gefahr > 0'
+
+              },
+              styles: [ {
+                  polygonOptions: {
+                      fillColor: '',
+                      fillOpacity: 0.0
+                  }
+              }, {
+                  where: 'Krankheit = \'Malaria\'',
+                  polygonOptions: {
+                      fillColor: '#ff6c00',
+                      fillOpacity: 0.2
+                  }
+              },
+                  {
+                      where: 'Krankheit = \'Ebola\'',
+                      polygonOptions: {
+                          fillColor: '#ff0006',
+                          fillOpacity: 0.2
+                      }
+                  }]
+          });
+          layer.setMap(map);
+
+
+
+          /* neues Info-Fenster */
+          google.maps.event.addListener(layer, 'click', function(e) {
+
+              // Change the content of the InfoWindow
+              var achtung = "Achtung "
+              var danger = achtung.bold()
+
+              e.infoWindowHtml = danger +  e.row['Krankheit'].value + "<br>";
+          });
+
+
       }
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZLMhUcGgyrPcMynUS21Tq4IdYXTRJXeY&libraries=places&callback=initMap"
@@ -296,20 +280,46 @@
   <table id="text">
 
       <tr> <td id="text">Reiseziel</td></tr>
-    <tr><td><input id="input1" type="text"></td></tr>
+    <tr><td><input id="input1" name="destination" type="text"></td></tr>
   <tr id="text"><td>Abflug</td></tr>
   <!--Besser: Combobox-->
  <td> <input id="input1" type="text"></td>
   <!--Besser: DatePicker-->
-    <tr><td><input id="input1" type="datetime-local"></td></tr>
-    <tr id="text"><td>Dauer in Tage</td></tr>
-    <tr><td><input id="input1" type="text"></td></tr>
+    <tr><td><input id="input1" name="startDate" placeholder="dd/mm/yyyy" type="datetime-local"></td></tr>
+    <tr id="text"><td>Dauer in Tagen</td></tr>
+    <tr><td><input id="input1" name="duration" type="text"></td></tr>
 
   </table>
 
+  <script>
+      function expedia() {
+
+          var link ="https://www.expedia.de/Hotel-Search?packageType=fh&searchProduct=hotel&c=2cf23a2f-b989-4c31-8330-43443e06c7e1&adults=2&originId=179896&ftla=MUC&destination=";
+
+          link = link + document.getElementById("destination").value;
+
+          link = link + "+(WAS-Alle+Flugh%C3%A4fen)&destinationId=&ttla=WAS&startDate=";
+
+          link = link + document.getElementById("startDate").value;
+
+          link = link + "&endDate=";
+
+          var start = document.getElementById("startDate").value;
+
+          var endDate = new Date(start + document.getElementById("duration").value);
+
+          link = link + endDate.String;
+
+          link = link + "&sort=recommended&tripType=ROUND_TRIP&misId=5fb26802-5a02-48d5-89bf-5f0f7c2f5a1b";
+
+          return link;
+      }
+  </script>
+
   <div id="suche">
     <div id="link">
-      <%= link_to 'Suche' , '/main' %>
+      <a href= "javascript:expedia()"  target="_blank" >Suche</a>
+
     </div>
 </div>
 </div>
