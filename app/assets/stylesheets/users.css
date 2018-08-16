@@ -1,0 +1,83 @@
+.mandatory_field{
+    font-size: 0.7em;
+    font-weight: bold;
+    vertical-align: super;
+}
+
+#mandatory_fields{
+    font-size: 1em;
+    transform: translate(-30%,110%);
+}
+
+.regInput {
+    color: white;
+    font-family: "Segoe UI Light";
+    font-size: 1em;
+    outline: none;
+    background-color: transparent;
+    width: 90%;
+    border-color: white;
+    border-radius: 10px;
+    border-width: 2px;
+
+}
+
+#reg{
+    text-align: center;
+    color: white;
+
+}
+
+.regAttribut{
+    font-family: "Segoe UI Light";
+    font-size: 2.0em;
+    text-align: left;
+    padding: 20px 20px 20px 20px;
+
+}
+
+#regLogin{
+    width: 8vw;
+    padding: 5px 40px 5px 40px;
+    font-family: "Segoe UI Light";
+    font-size: 2.0em;
+
+    color: white;
+    background-color: rgba(255,255,255,0);
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 13vw;
+    border-color: white;
+    border-width: 1.5px;
+    border-style: solid;
+    transform: translate(-95%,10%);
+
+}
+
+#registerContainer{
+    position: absolute;
+    text-align: center;
+
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+
+    box-shadow: inset 0 0 0 500px rgba(255,255,255,0.32);
+    border-radius: 25px;
+    height: 80%;
+    z-index: 2;
+}
+
+#regLegend{
+    margin-left: 8.5vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Segoe UI";
+    font-size: 2.8em;
+    transform: translate(50%);
+}
+
+#regField{
+    padding: 20px 20px 50px 20px;
+    border: none;
+}

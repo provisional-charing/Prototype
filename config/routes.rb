@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   get '/welcome',to:'pages#welcome_page'
   get '/main',to:'pages#test_page'
   get '/agb', to:'pages#agb_page'
-  get '/regist', to:'pages#registration.html'
   get '/accinfo', to:'pages#accountinfo.html'
   get '/note', to:'pages#notiz.html'
   get '/login', to:'pages#login_page'
