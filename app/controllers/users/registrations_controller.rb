@@ -58,7 +58,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super(resource)
   # end
   #
-  private
+  protected
 
   def sign_up_params
     params.require(:user).permit(:user_name,:first_name,:last_name,:email,:phone,:age,:password,:password_confirmation) if params[:user].present?

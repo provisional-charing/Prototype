@@ -28,6 +28,11 @@
             </tr>
 
             <tr>
+              <td class="regAttribut"><%#= f.label :age %>Alter</td>
+              <td class="regAttribut"><%= f.text_field :age, autocomplete: "off", class: "regInput" %></td>
+            </tr>
+
+            <tr>
               <td class="regAttribut">Telefonnummer</td>
               <td class="regAttribut"><%= f.email_field :phone, autocomplete: "off", class: "regInput" %></td>
             </tr>

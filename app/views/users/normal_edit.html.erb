@@ -1,0 +1,91 @@
+<div id="gesamtesFenster">
+  <%= image_tag "impfpassBackground.jpg", class: "testIcon" %>
+</div>
+
+<%= render partial: 'pages/newsline'%>
+
+<%= render partial: 'pages/leftsidepart'%>
+
+<div id="tabellenPlatz">
+  <%= form_for @user, url: user_normal_update_path(@user), html: {method: :post} do |f| %>
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div id="reg">
+      <fieldset id="regField">
+        <legend id="regLegend">Accoutinfo</legend>
+
+        <table>
+          <tr>
+            <td class="regAttribut"><%= f.label :user_name, style: "display: inline" %>
+              <span class="mandatory_field">*</span></td>
+            <td class="regAttribut"><%= f.text_field :user_name, autofocus: true, autocomplete: "off", class: "regInput" %></td>
+          </tr>
+
+          <tr>
+            <td class="regAttribut"><%#= f.label :first_name %>Vorname</td>
+            <td class="regAttribut"><%= f.text_field :first_name, autocomplete: "off", class: "regInput" %></td>
+          </tr>
+
+          <tr>
+            <td class="regAttribut"><%#= f.label :last_name %>Nachname</td>
+            <td class="regAttribut"><%= f.text_field :last_name, autocomplete: "off", class: "regInput" %></td>
+          </tr>
+
+          <tr>
+            <td class="regAttribut"><%#= f.label :age %>Alter</td>
+            <td class="regAttribut"><%= f.text_field :age, autocomplete: "off", class: "regInput" %></td>
+          </tr>
+
+          <tr>
+            <td class="regAttribut"><%#= f.label :phone %>Telefonnummer</td>
+            <td class="regAttribut"><%= f.email_field :phone, autocomplete: "off", class: "regInput" %></td>
+          </tr>
+
+          <tr>
+            <td class="regAttribut"><%= f.label :email, style: "display: inline" %>
+              <span class="mandatory_field">*</span></td>
+            <td class="regAttribut"><%= f.email_field :email, autocomplete: "email", class: "regInput" %></td>
+          </tr>
+
+          <tr>
+            <td class="regAttribut"><%= f.label :password, style: "display: inline" %>
+              <span class="mandatory_field">*</span>
+              <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br/>
+            </td>
+            <td class="regAttribut"><%= f.password_field :password, autocomplete: "off", class: "regInput" %></td>
+          </tr>
+
+          <tr>
+            <td class="regAttribut"><%= f.label :password_confirmation, style: "display: inline" %>
+              <span class="mandatory_field">*</span></td>
+            <td class="regAttribut"><%= f.password_field :password_confirmation, autocomplete: "off", class: "regInput" %></td>
+          </tr>
+          <tr>
+            <td class="regAttribut"><%= f.label :old_password, style: "display: inline" %>
+              <span class="mandatory_field">*</span></td>
+            <td class="regAttribut"><%= f.password_field :old_password, autocomplete: "off", class: "regInput" %></td>
+          </tr>
+        </table>
+      </fieldset>
+      <%= f.submit "change", id: "regLogin" %>
+
+      <div id="mandatory_fields">
+        <span>Felder mit einem <span class="mandatory_field">*</span> sind auszuf&uuml;llen, bei &Auml;nderung dieser ist mit dem alten Password zu best&auml;tigen.
+              Im Falle einer Email&auml;nderung erhalten sie eine Best&auml;tigunsmail.
+              In diesem Fall &auml;ndert sich die Emil erst, wenn auf den Bestätigungslink geklickt wurde.</span>
+      </div>
+    </div>
+  <% end %>
+</div>

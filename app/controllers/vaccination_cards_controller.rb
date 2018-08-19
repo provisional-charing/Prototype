@@ -1,5 +1,6 @@
 class VaccinationCardsController < ApplicationController
   before_action :set_vaccination_card, only: [:show, :edit, :update, :destroy]
+  before_action :check_classification_doc, only:[:index]
 
   # GET /vaccination_cards
   # GET /vaccination_cards.json
