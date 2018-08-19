@@ -18,8 +18,6 @@ Rails.application.routes.draw do
   get '/welcome',to:'pages#welcome_page'
   get '/main',to:'pages#test_page'
   get '/agb', to:'pages#agb_page'
-  get '/accinfo', to:'users#normal_edit'
-  post '/user_own_update', to:'users#normal_update', as: :user_normal_update
   get '/note', to:'pages#notiz.html'
   get '/login', to:'pages#login_page'
   get '/impfpass', to:'pages#impfpass_page'
@@ -27,4 +25,6 @@ Rails.application.routes.draw do
   get '/VeröffentlichungsAntrag', to: 'pages#pdf' , as: :ProjectFormular
   get '/wikiMain', to:'diseases#wikiMain_page'
   get '/socialProjects', to: 'projects#sozialeProjekte_page'
+  get '/accinfo', to:'admin/users#normal_edit'
+  post '/user_own_update', to:'admin/users#normal_update', as: :user_normal_update
 end

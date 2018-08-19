@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Admin::UsersController < ApplicationController
 before_action :authenticate_user!
 before_action :set_user, only: [:edit]
 before_action :set_current_user, only: [:normal_edit, :normal_update]
