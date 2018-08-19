@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :notes
   has_many :vaccination_cards
   has_many :vaccinations, through: :vaccination_cards
   # attr_writer :login

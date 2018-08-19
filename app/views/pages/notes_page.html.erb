@@ -1,0 +1,38 @@
+<div id="gesamtesFenster">
+  <%= image_tag "impfpassBackground.jpg", class: "testIcon" %>
+</div>
+
+<%= render partial: 'pages/newsline'%>
+
+<%= render partial: 'pages/leftsidepart'%>
+
+<div id="tabellenPlatz">
+  <div id="my_notes">
+    <% @notes.each do |note|%>
+      <%= link_to note.title, root_path%> </br>
+    <% end %>
+  </div>
+<%= form_for(@note) do |f| %>
+
+  <div  class="notiz1">
+
+    <%= f.text_area :title, id:"noteAttribut", style:"resize:none", cols:"20", rows:"1", placeholder:"Titel" %>
+
+  </div>
+  <div class="notiz2">
+
+    <%= f.text_area :content, id:"noteAttribut", style:"resize:none", name:"text", cols:"75", rows:"13", placeholder:"Notiz" %>
+
+    <%= f.submit "Speichern", style:"font-size: 16pt" %>
+
+  </div>
+
+  <div class="Seitenfenster3">
+    <%= link_to "Hinzufügen", new_note_path, remote: true %>
+    <% unless @notes.first.id.nil? %>
+      <%= link_to "Löschen", @delete_path, remote: true, method: :delete %>
+    <% end %>
+  </div>
+
+<% end %>
+</div>

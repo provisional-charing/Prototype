@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180816192803) do
+ActiveRecord::Schema.define(version: 20180819185207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(version: 20180816192803) do
     t.text     "counteraction"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "title"
+    t.text     "content"
+    t.datetime "remember_date"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["user_id"], name: "index_notes_on_user_id", using: :btree
   end
 
   create_table "projects", force: :cascade do |t|
@@ -93,6 +103,7 @@ ActiveRecord::Schema.define(version: 20180816192803) do
     t.index ["disease_id"], name: "index_vaccinations_on_disease_id", using: :btree
   end
 
+  add_foreign_key "notes", "users"
   add_foreign_key "vaccination_cards", "users"
   add_foreign_key "vaccination_cards", "vaccinations"
   add_foreign_key "vaccinations", "diseases"

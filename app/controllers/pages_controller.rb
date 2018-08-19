@@ -13,6 +13,21 @@ def test_page
 
 end
 
+def notes_page
+  @notes=current_user.notes
+  if @notes.last.nil?
+    @delete_path = root_path
+    @note=current_user.notes.build
+  else
+    @note=@notes.last
+    @delete_path = note_path(@note)
+  end
+end
+
+def change_note
+
+end
+
 def impfpass_page
   unless current_user.nil?
     @vaccinations=current_user.vaccination_cards
