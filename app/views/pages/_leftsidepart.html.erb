@@ -8,6 +8,9 @@
       <li id="menuLink"><%= link_to "Notizen", "/note"%></li>
       <li id="menuLink"><%= link_to "soziale Projekte", "/socialProjects" %></li>
       <li id="menuLink"><%= link_to "Kompendium", "/wikiMain" %></li>
+      <% if user_signed_in? %>
+        <li id="menuLink"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
+      <% end %>
     </ul>
   </div>
 
