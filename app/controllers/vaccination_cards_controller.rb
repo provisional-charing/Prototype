@@ -1,12 +1,20 @@
 class VaccinationCardsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_vaccination_card, only: [:show, :edit, :update, :destroy]
-  before_action :check_classification_doc, only:[:index]
+  before_action :check_classification_admin, only:[:index]
+  before_action :check_classification_doc, only:[:doc_index]
+
 
   # GET /vaccination_cards
   # GET /vaccination_cards.json
   def index
     @vaccination_cards = VaccinationCard.all
   end
+
+  # later on for each doctor to see the vaccination cards of his patients
+  # def doc_index
+  #
+  # end
 
   # GET /vaccination_cards/1
   # GET /vaccination_cards/1.json

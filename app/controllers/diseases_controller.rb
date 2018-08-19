@@ -1,4 +1,5 @@
 class DiseasesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_disease, only: [:show, :edit, :update, :destroy]
   before_action :check_classification_doc, only: [:index, :new, :edit, :create, :update, :destroy]
 

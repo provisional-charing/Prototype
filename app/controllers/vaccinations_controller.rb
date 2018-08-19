@@ -1,4 +1,5 @@
 class VaccinationsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_vaccination, only: [:show, :edit, :update, :destroy]
   before_action :check_classification_doc
 

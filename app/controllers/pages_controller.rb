@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_action :authenticate_user!, only: [:welcome_page, :agb_page]
 
 def welcome_page
 
@@ -9,10 +10,6 @@ def agb_page
 end
 
 def test_page
-
-end
-
-def login_page
 
 end
 

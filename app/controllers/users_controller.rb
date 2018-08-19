@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
+before_action :authenticate_user!
 before_action :set_user, only: [:edit]
 before_action :set_current_user, only: [:normal_edit, :normal_update]
-before_action :check_classification_admin, only:[:index, :new,:create,:update]
+before_action :check_classification_admin, only:[:index,:new,:create,:update]
 
   # GET /tests
   # GET /tests.json
