@@ -2,10 +2,14 @@
   <%= image_tag "impfpassBackground.jpg", class: "testIcon" %>
 </div>
 
+
 <%= render partial: 'pages/newsline'%>
 
 <%= render partial: 'pages/leftsidepart'%>
 <!-- div mit combobox für die Auswahl -->
+
+
+
   <div id="tabellenPlatz">
 
     <div id="who">
@@ -18,6 +22,7 @@
         <option value="Schutzimpfungen">Schutzimpfungen</option>
       </select>
       <%= link_to "Impfkalender", '/vaccination_information', id: "link_to_vacc_information"%>
+      <%= link_to 'Impfung hinzufügen',  new_vaccination_card_path%>
     </div>
 
     <div id="link_to_vacc_information"></div>
@@ -25,6 +30,8 @@
     <!-- Tabelle erstellen-->
     <div id="tabellenContainer">
       <table id="tabelleSI">
+
+          <thead>
         <tr>
         <th>Art der Impfung<br>Name des Impfstoffes</th>
           <th>Typ</th>
@@ -33,104 +40,24 @@
           <th>Datum</th>
           <th>Signatur des Arztes</th>
         </tr>
+          </thead>
+          <tbody>
+          <% @current_user.vaccination_cards.each do |vc| %>
+        <tr>
+
+          <td><%= vc.injection_type %></td>
+          <td><%= vc.typ %>  </td>
+          <td><%= vc.charge_number %>  </td>
+          <td><%= vc.dosis_e%> "< | >" <%=  vc.dosis_ml %>  </td>
+          <td><%= vc.get_date %>  </td>
+          <td><%= vc.doctor %>  </td>
+
+        </tr>
+          <% end %>
 
 
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
+          </tbody>
+
 
       </table>
 

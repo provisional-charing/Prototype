@@ -27,7 +27,9 @@
 
 #tabelleSI td, #tabelleSI th{
     border: white solid 1px;
-    padding: 5px;
+    padding: 14pt;
+    color: #000000;
+    font-weight: bold ;
 }
 
 #vaccination_calender{
