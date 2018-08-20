@@ -2,6 +2,9 @@
     padding: 1vh;
 }
 
+
+
+
 #impfKategorie{
     padding: 5px;
     margin: 1vh;
@@ -15,21 +18,34 @@
 }
 
 #tabelleSI{
-    border-collapse: collapse;
+    border-style: none;
     margin-left: 1.2vw;
     margin-right: 1.2vw;
     margin-top: 1vh;
     margin-bottom: 1vh;
     width: 77.4vw;
     font-family: "Segoe UI Light";
-    color: white;
+    background-color: transparent;
+
 }
 
-#tabelleSI td, #tabelleSI th{
+#tabelleSI th{
     border: white solid 1px;
-    padding: 14pt;
-    color: #000000;
+    padding: 1%;
+    color: #ffffff;
     font-weight: bold ;
+}
+
+#tabelleSI td {
+    border: white solid 1px;
+    padding: 1%;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.odd{
+    background-color: transparent !important;
 }
 
 #vaccination_calender{
@@ -44,4 +60,51 @@
     font-size: 1.5em;
     color: white;
     margin-left: 1%;
+    text-decoration: none;
 }
+
+/*SHOW ENTRIES*/
+
+#tabelleSI_length{
+    margin: 1%;
+    margin-left: 1.5%;
+    font-family: "Segoe UI Light";
+    color: white;
+
+}
+
+/*INFO FÜR TABELLE*/
+#tabelleSI_info{
+
+    margin-left: 1.5%;
+    font-family: "Segoe UI Light";
+    color: white;
+
+}
+
+/*SUCHFELD*/
+#tabelleSI_filter{
+    margin: 1%;
+    margin-right: 1.7%;
+    font-family: "Segoe UI Light";
+    color: white;
+}
+
+/*Prev or Next*/
+#tabelleSI_paginate{
+    margin: 1%;
+    margin-right: 1.7%;
+
+}
+
+#tabelleSI_previous{
+    color: white !important;
+    font-family: "Segoe UI Light";
+}
+
+#tabelleSI_next{
+    color: white !important;
+    font-family: "Segoe UI Light";
+}
+
+

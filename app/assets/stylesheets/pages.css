@@ -242,3 +242,16 @@ body {
     padding: 10px 10px 10px 10px;
 
 }
+
+/*Seite soziale Projekte, Link für Antrag */
+
+#allgInformationen{
+    margin-bottom: 2%;
+}
+
+#link_to_Antrag{
+    font-family: "Segoe UI Light";
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+}
