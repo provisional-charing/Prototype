@@ -9,7 +9,7 @@
 <div id="tabellenPlatz">
   <div id="my_notes">
     <% @notes.each do |note|%>
-      <%= link_to note.title, root_path%> </br>
+      <%= link_to note.title.blank? ? 'untitled':note.title, custom_notes_path(id:note.id) %> </br>
     <% end %>
   </div>
 <%= form_for(@note) do |f| %>
@@ -21,16 +21,17 @@
   </div>
   <div class="notiz2">
 
-    <%= f.text_area :content, id:"noteAttribut", style:"resize:none", name:"text", cols:"75", rows:"13", placeholder:"Notiz" %>
+    <%= f.text_area :content, id:"noteAttribut", style:"resize:none", cols:"75", rows:"13", placeholder:"Notiz" %>
 
     <%= f.submit "Speichern", style:"font-size: 16pt" %>
 
   </div>
 
   <div class="Seitenfenster3">
-    <%= link_to "Hinzufügen", new_note_path, remote: true %>
-    <% unless @notes.first.id.nil? %>
-      <%= link_to "Löschen", @delete_path, remote: true, method: :delete %>
+    <%= link_to "Hinzufügen", custom_notes_path, remote: true %>
+    <% unless @note.id.nil? %>
+      <% path = (@note.id.nil? ? root_path : note_path(@note))%>
+      <%= link_to "Löschen", path, remote: true, method: :delete %>
     <% end %>
   </div>
 

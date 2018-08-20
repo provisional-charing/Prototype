@@ -14,14 +14,16 @@ def test_page
 end
 
 def notes_page
-  @notes=current_user.notes
-  if @notes.last.nil?
-    @delete_path = root_path
-    @note=current_user.notes.build
-  else
-    @note=@notes.last
-    @delete_path = note_path(@note)
+  if current_user.notes.first.nil? || !current_user.notes.last.id.nil?
+    current_user.notes.build
   end
+
+  if params[:id].nil? || current_user.id!=Note.find(params[:id]).user_id
+    @note=current_user.notes.last
+  else
+    @note=Note.find(params[:id]);
+  end
+    @notes = current_user.notes
 end
 
 def change_note
