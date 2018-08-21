@@ -1,3 +1,98 @@
-// Place all the styles related to the notes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#meineNotizen{
+    font-size: 14pt;
+    font-family: "Segoe UI Light";
+    text-decoration: underline white;
+    color: white;
+}
+
+#notiz1{
+}
+
+#notiz2{
+
+}
+
+#my_notes{
+margin-bottom: 15%;
+}
+
+#erstelleNotiz{
+    margin: 1% 1% 1% 1%;
+    float: left;
+
+}
+
+#Seitenfenster3{
+    margin: 1%;
+    float: left !important;
+    border-style: solid;
+    padding: 1%;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: white;
+
+    width: 13%;
+}
+
+#noteAttribut{
+    border-style: solid;
+    padding: 2%;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: white;
+
+
+    background: transparent;
+    width: 470%;
+    height: 500pt;
+
+    font-size: 14pt;
+    font-family: "Segoe UI Light";
+    color: #ffffff;
+}
+
+#noteTitle{
+
+    border-style: solid;
+    margin-bottom: 5%;
+    padding: 1% 1% 0% 1.5%;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: white;
+
+    background: transparent;
+    width: 200%;
+
+
+    font-size: 14pt;
+    font-family: "Segoe UI Light";
+    color: #ffffff;
+}
+
+#save{
+    background-color: transparent;
+    color: white;
+
+    margin-top: 3%;
+    border-style: solid;
+    padding: 2%;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: white;
+}
+
+#linkAddDelete{
+    font-family: "Segoe UI Light";
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    margin: 1%;
+
+    border-style: solid;
+    padding: 2%;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: white;
+
+}

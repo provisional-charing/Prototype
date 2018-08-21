@@ -22,12 +22,12 @@
 
     <div id="reg">
       <fieldset id="regField">
-        <legend id="regLegend">Accoutinfo</legend>
+        <legend id="regLegend">Accountinfo</legend>
 
         <table>
           <tr>
             <td class="regAttribut"><%= f.label :user_name, style: "display: inline" %>
-              <span class="mandatory_field">*</span></td>
+              <span class="mandatory_field"></span></td>
             <td class="regAttribut"><%= f.text_field :user_name, autofocus: true, autocomplete: "off", class: "regInput" %></td>
           </tr>
 
@@ -82,9 +82,8 @@
       <%= f.submit "change", id: "regLogin" %>
 
       <div id="mandatory_fields">
-        <span>Felder mit einem <span class="mandatory_field">*</span> sind auszuf&uuml;llen, bei &Auml;nderung dieser ist mit dem alten Password zu best&auml;tigen.
-              Im Falle einer Email&auml;nderung erhalten sie eine Best&auml;tigunsmail.
-              In diesem Fall &auml;ndert sich die Emil erst, wenn auf den Bestätigungslink geklickt wurde.</span>
+        <span>Felder mit einem <span class="mandatory_field">*</span> sind Pflichtfelder.
+              Im Falle der &Auml;nderung Ihrer E-Mail Adresse erhalten Sie eine Best&auml;tigunsmail.</span>
       </div>
     </div>
   <% end %>

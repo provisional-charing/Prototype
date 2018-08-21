@@ -5,20 +5,23 @@
 }
 
 #mandatory_fields{
-    font-size: 1em;
+    text-align: left;
+    margin: 1% 2% 4% 4%;
+    font-size: 11pt;
     transform: translate(-2%,110%);
 }
 
 .regInput {
     color: white;
     font-family: "Segoe UI Light";
-    font-size: 1em;
+    font-size: 16pt;
     outline: none;
     background-color: transparent;
     width: 90%;
     border-color: white;
     border-radius: 10px;
     border-width: 2px;
+    padding: 1%;
 
 }
 
@@ -30,23 +33,23 @@
 
 .regAttribut{
     font-family: "Segoe UI Light";
-    font-size: 2.0em;
+    font-size: 16pt;
     text-align: left;
-    padding: 20px 20px 20px 20px;
+    padding: 2%;
 
 }
 
 #regLogin{
-    width: 8vw;
-    padding: 5px 40px 5px 40px;
+    display: inline-block;
+    padding:0.5%;
     font-family: "Segoe UI Light";
-    font-size: 2.0em;
+    font-size: 18pt;
 
     color: white;
     background-color: rgba(255,255,255,0);
     text-align: center;
     border-radius: 10px;
-    margin-left: 13vw;
+
     border-color: white;
     border-width: 1.5px;
     border-style: solid;
@@ -69,11 +72,11 @@
 }
 
 #regLegend{
-    margin-left: 8.5vw;
-    padding-left: 10px;
-    padding-right: 10px;
+    text-decoration: underline;
+    margin-left: 10%;
+    margin-top: 1%;
     font-family: "Segoe UI";
-    font-size: 2.8em;
+    font-size: 28pt;
     transform: translate(50%);
 }
 

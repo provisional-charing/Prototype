@@ -7,33 +7,43 @@
 <%= render partial: 'pages/leftsidepart'%>
 
 <div id="tabellenPlatz">
-  <div id="my_notes">
-    <% @notes.each do |note|%>
-      <%= link_to note.title.blank? ? 'untitled':note.title, custom_notes_path(id:note.id) %> </br>
-    <% end %>
-  </div>
-<%= form_for(@note) do |f| %>
 
-  <div  class="notiz1">
+  <div id="Seitenfenster3">
 
-    <%= f.text_area :title, id:"noteAttribut", style:"resize:none", cols:"20", rows:"1", placeholder:"Titel" %>
+    <div id="my_notes">
 
-  </div>
-  <div class="notiz2">
+      <h3 id="meineNotizen">Meine Notizen</h3>
 
-    <%= f.text_area :content, id:"noteAttribut", style:"resize:none", cols:"75", rows:"13", placeholder:"Notiz" %>
+      <% @notes.each do |note|%>
+        <%= link_to note.title.blank? ? 'untitled':note.title, custom_notes_path(id:note.id), id: "link_to_Antrag" %> </br>
+      <% end %>
+    </div>
 
-    <%= f.submit "Speichern", style:"font-size: 16pt" %>
-
-  </div>
-
-  <div class="Seitenfenster3">
-    <%= link_to "Hinzufügen", custom_notes_path, remote: true %>
+    <%= link_to "Hinzufügen", custom_notes_path, remote: true , id: "linkAddDelete"%>
     <% unless @note.id.nil? %>
       <% path = (@note.id.nil? ? root_path : note_path(@note))%>
-      <%= link_to "Löschen", path, remote: true, method: :delete %>
+      <%= link_to "Löschen", path, remote: true, method: :delete , id: "linkAddDelete"%>
     <% end %>
   </div>
+
+
+<%= form_for(@note) do |f| %>
+
+    <div id="erstelleNotiz">
+  <div  id="notiz1">
+
+    <%= f.text_area :title, id:"noteTitle", style:"resize:none", rows:"1" ,placeholder:"Titel" %>
+
+  </div>
+  <div id="notiz2">
+
+    <%= f.text_area :content, id:"noteAttribut", style:"resize:none", placeholder:"Notiz" %>
+  </div>
+      <div id="speichern">
+    <%= f.submit "Speichern", style:"font-size: 16pt", id: "save"%>
+      </div>
+
+    </div>
 
 <% end %>
 </div>

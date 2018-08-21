@@ -1,12 +1,13 @@
-#register{
-    margin-left: 3vw;
-    margin-top: 2vh;
+#overview{
+    margin-left: 4.5%;
+    margin-top: 1%;
     color: white;
     text-align: left;
     border: solid 1px white;
     border-radius: 10px;
-    padding: 10pt 0pt 16pt 10pt ;
+    padding: 10pt 10pt 16pt 10pt ;
     line-height: 20pt;
+    display: inline-block;
 }
 
 #anker{
