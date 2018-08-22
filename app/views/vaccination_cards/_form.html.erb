@@ -1,3 +1,9 @@
+<div id="gesamtesFenster">
+  <%= image_tag "impfpassBackground.jpg", class: "testIcon" %>
+</div>
+
+
+
 <%= form_for(vaccination_card) do |f| %>
   <% if vaccination_card.errors.any? %>
     <div id="error_explanation">
@@ -11,62 +17,137 @@
     </div>
   <% end %>
 
-  <div class="field">
+
+  <table style="color: white" >
+
+    <tbody>
+    <tr>
+      <td>
+
+  <div class="field" style="font-size: 14pt">
     <%= f.label :vaccination_id %>
     <%= f.text_field :vaccination_id %>
-  </div>
+  </div></td>
+
+      <td>
 
   <div class="field">
     <%= f.label :user_id %>
     <%= f.text_field :user_id %>
-  </div>
+  </div></td>
+
+      <td>
 
   <div class="field">
     <%= f.label :get_date %>
     <%= f.date_select :get_date %>
-  </div>
+  </div></td>
+
+      <td>
 
   <div class="field">
     <%= f.label :injection_type %>
     <%= f.text_field :injection_type %>
-  </div>
+  </div></td>
+
+      <td>
 
   <div class="field">
     <%= f.label :dosis_e %>
     <%= f.text_field :dosis_e %>
-  </div>
+  </div></td>
+
+      <td>
 
   <div class="field">
     <%= f.label :dosis_ml %>
     <%= f.text_field :dosis_ml %>
-  </div>
+  </div></td>
+
+      <td>
 
   <div class="field">
     <%= f.label :typ %>
     <%= f.text_field :typ %>
-  </div>
+  </div></td>
+
+      <td>
 
   <div class="field">
     <%= f.label :charge_number %>
     <%= f.text_field :charge_number %>
-  </div>
+  </div></td>
+
+      <td>
 
   <div class="field">
     <%= f.label :doctor %>
     <%= f.text_field :doctor %>
-  </div>
+  </div></td>
+
+     <td>
 
   <div class="field">
     <%= f.label :test %>
     <%= f.text_field :test %>
-  </div>
+  </div></td>
+
+  <td>
 
   <div class="field">
     <%= f.label :reaktion %>
     <%= f.text_field :reaktion %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  </div></td>
+    </tr>
+  <td>
+    <br>
+    <div class="actions">
+      <%= f.submit %>
+    </div></td>
+    </tbody>
+  </table>
 <% end %>
+
+
+<table id="vccards" style="color: white">
+  <thead>
+  <tr>
+    <th>Vaccination</th>
+    <th>User</th>
+    <th>Get date</th>
+    <th>Injection type</th>
+    <th>Dosis e</th>
+    <th>Dosis ml</th>
+    <th>Typ</th>
+    <th>Charge number</th>
+    <th>Doctor</th>
+    <th>Test</th>
+    <th>Reaktion</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% current_user.vaccination_cards.each do |vaccination_card| %>
+    <tr>
+      <td><%= vaccination_card.vaccination %></td>
+      <td><%= vaccination_card.user %></td>
+      <td><%= vaccination_card.get_date %></td>
+      <td><%= vaccination_card.injection_type %></td>
+      <td><%= vaccination_card.dosis_e %></td>
+      <td><%= vaccination_card.dosis_ml %></td>
+      <td><%= vaccination_card.typ %></td>
+      <td><%= vaccination_card.charge_number %></td>
+      <td><%= vaccination_card.doctor %></td>
+      <td><%= vaccination_card.test %></td>
+      <td><%= vaccination_card.reaktion %></td>
+      <td><%= link_to 'Show', vaccination_card %></td>
+      <td><%= link_to 'Edit', edit_vaccination_card_path(vaccination_card) %></td>
+      <td><%= link_to 'Destroy', vaccination_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+
+
