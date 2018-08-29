@@ -1,0 +1,83 @@
+<style>
+.Seitenfenster2{
+margin: 13% -0 ;
+
+background: rgba(0,0,0, .35);
+width: 9vw;
+bottom: 2em;
+border-bottom-left-radius: 10px;
+border-top-left-radius: 10px;
+padding: 10px 10px 20px 30px;
+z-index: 2;
+
+}
+#input1{
+  font-size: 1.0em;
+  font-family: "Segoe UI Light";
+  width: 170px;
+  color: white;
+  outline: none;
+  background-color: transparent;
+
+  margin-bottom: 10px;
+  border-color: white;
+  border-radius: 10px;
+  border-width: 1px;
+}
+</style>
+
+<div id="gesamtesFenster">
+  <%= image_tag "impfpassBackground.jpg", class: "testIcon" %>
+</div>
+
+<%= render partial: 'pages/newsline'%>
+
+<%= render partial: 'pages/leftsidepart'%>
+<div id="tabellenPlatz">
+<table id="text">
+
+  <tr> <td id="text">Reiseziel</td></tr>
+  <tr><td><input id="input1" name="destination" type="text"></td></tr>
+  <tr id="text"><td>Abflug</td></tr>
+  <!--Besser: Combobox-->
+  <td> <input id="input1" type="text"></td>
+  <!--Besser: DatePicker-->
+
+  <tr><td><div><input type="date" id="input1" name="startDate"></div></td></tr>
+  <tr id="text"><td>Dauer in Tagen</td></tr>
+  <tr><td><input id="input1" name="duration" type="text"></td></tr>
+
+</table>
+
+<script>
+    function expedia() {
+
+        var link ="https://www.expedia.de/Hotel-Search?packageType=fh&searchProduct=hotel&c=2cf23a2f-b989-4c31-8330-43443e06c7e1&adults=2&originId=179896&ftla=MUC&destination=";
+
+        link = link + document.getElementById("destination").value;
+
+        link = link + "+(WAS-Alle+Flugh%C3%A4fen)&destinationId=&ttla=WAS&startDate=";
+
+        link = link + document.getElementById("startDate").value;
+
+        link = link + "&endDate=";
+
+        var start = document.getElementById("startDate").value;
+
+        var endDate = new Date(start + document.getElementById("duration").value);
+
+        link = link + endDate.String;
+
+        link = link + "&sort=recommended&tripType=ROUND_TRIP&misId=5fb26802-5a02-48d5-89bf-5f0f7c2f5a1b";
+
+        return link;
+    }
+</script>
+
+<div id="suche">
+  <div id="link">
+    <a href= "javascript:expedia()"  target="_blank" >Suche</a>
+
+  </div>
+</div>
+</div>

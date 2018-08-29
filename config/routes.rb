@@ -27,5 +27,6 @@ Rails.application.routes.draw do
   get '/wikiMain', to:'diseases#wikiMain_page'
   get '/socialProjects', to: 'projects#sozialeProjekte_page'
   get '/accinfo', to:'admin/users#normal_edit'
+  get 'flysearch', to:'pages#flysearch'
   post '/user_own_update', to:'admin/users#normal_update', as: :user_normal_update
 end
