@@ -23,26 +23,23 @@
     <tbody>
     <tr>
       <td>
-
-  <div class="field" style="font-size: 14pt">
-    <%= f.label :vaccination_id %>
-    <%= f.text_field :vaccination_id %>
-  </div></td>
-
+        <div class="field">
+          <%= f.label :vaccination %>
+          <%= f.select :vaccination_id, Vaccination.all.collect {|v| [v.user_name, v.id]}, {include_blank: 'None'} %>
+        </div>
+      </td>
       <td>
-
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
-  </div></td>
-
+        <div class="field">
+          <%= f.label :user %>
+          <%= f.select :user_id, User.all.collect {|u| [ u.user_name, u.id ] }, {include_blank: 'None'} %>
+        </div>
+      </td>
       <td>
-
-  <div class="field">
-    <%= f.label :get_date %>
-    <%= f.date_select :get_date %>
-  </div></td>
-
+        <div class="field">
+          <%= f.label :get_date %>
+          <%= f.date_select :get_date %>
+        </div>
+      </td>
       <td>
 
   <div class="field">

@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
+    <%= f.label :user %>
+    <%= f.select :user_id, User.all.collect {|u| [ u.user_name, u.id ] }, {include_blank: 'None'} %>
   </div>
 
   <div class="field">

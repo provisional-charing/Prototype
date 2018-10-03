@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :authenticate_user!, only: [:welcome_page, :agb_page]
+  before_action :authenticate_user!, except: [:welcome_page, :agb_page]
 
 def welcome_page
 

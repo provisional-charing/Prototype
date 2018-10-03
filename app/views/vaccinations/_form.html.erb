@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :disease_id %>
-    <%= f.text_field :disease_id %>
+    <%= f.label :disease %>
+    <%= f.select :disease_id, Disease.all.collect {|d| [d.name, d.id]}, {include_blank: 'None'} %>
   </div>
 
   <div class="field">
