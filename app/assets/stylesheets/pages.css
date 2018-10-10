@@ -1,5 +1,5 @@
 body {
-    font-family: Calibri;
+    font-family: "Segoe UI";
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -10,24 +10,35 @@ body {
 
 #title {
     position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%,-40%);
+    margin-top: 10%;
+    margin-left: 35%;
 
-    z-index: 1;
+}
+
+#logReg{
+    width: 100%;
+    height: 2.5%;
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    text-align: right;
+    z-index: 3;
+
+
 }
 
 
 #textContainer{
     position: absolute;
-    top: 200vh;
-    left: 50vw;
-
-    transform: translate(-50%,-40%);
-    overflow: hidden;
-
+    width: 90%;
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    margin-left: 6%;
     z-index: 2;
 }
+
+
+
 
 
 #login,
@@ -55,25 +66,27 @@ body {
 #link *{
     text-decoration: none;
     color: white;
+    padding-right: 0.5%;
 }
 
-#vision{
-
-    background: inherit;
+#vision1{
     text-align: left;
-    left: -25px;
-    right: 0;
-    top: -25px;
-    bottom: 0;
-    box-shadow: inset 0 0 0 500px rgba(255,255,255,0.32);
-    padding : 0px 5px 5px 10px;
+    padding: 0.5% 1% 0.5% 1%;
+    background-color:rgba(0,0,0,0.5);
     color: white;
     font-family: "Segoe UI Light";
-    font-size: 1.2em ;
-    margin-top: 100vh;
-    border-radius : 25px;
+    font-size: 14pt ;
+    margin-top: 90%;
+}
 
-
+.textfelder {
+    text-align: left;
+    padding: 0.5% 1% 0.5% 1%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: "Segoe UI Light";
+    font-size: 14pt;
+    margin-top: 50%;
 }
 
 #schlusswort{
@@ -107,6 +120,32 @@ body {
     overflow: hidden;
 
     z-index: 0;
+}
+
+/* Test für neuen Hintergrund */
+
+.verdunkelung {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.2);
+    overflow: hidden;
+    text-align: center;
+
+
+}
+
+.image-container {
+
+    position: absolute ;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
 }
 
 .video-container video {
@@ -160,14 +199,14 @@ body {
 /*Login Seite*/
 
 #log{
-
-    box-shadow: inset 0 0 0 500px rgba(255,255,255,0.32);
-    border-radius : 25px;
+    margin-top: 30%;
     z-index: 2;
     text-align: center;
     color: white;
     padding-top: 3%;
-    padding-bottom: 3%;
+    padding-bottom: 2%;
+    background-color: rgba(0,0,0,0.8);
+    min-width: 500px;
 }
 
 #loginContainer{
@@ -188,7 +227,6 @@ body {
     margin-bottom: 8%;
     color: white;
     text-align: center;
-    border-radius: 10px;
 
     border-color: white;
     border-width: 1.5px;
@@ -215,14 +253,15 @@ body {
 }
 
 #loginLegend{
-    margin: 1% 0% 3% 20%;
+    margin: 1% 0% 3% 30%;
     font-family: "Segoe UI";
     font-size: 24pt;
 
 }
 
 #loginAttribut{
-   width: 35%;
+
+    width: 40%;
     font-family: "Segoe UI Light";
     font-size: 16pt;
     text-align: left;
@@ -230,7 +269,8 @@ body {
 }
 
 #loginInput {
-    padding: 1%;
+
+    padding: 2%;
     color: white;
     font-family: "Segoe UI Light";
     font-size: 16pt;
@@ -238,7 +278,6 @@ body {
     background-color: transparent;
     width: 90%;
     border-color: white;
-    border-radius: 10px;
     border-width: 2px;
 
 }
@@ -255,3 +294,23 @@ padding: 0;
     margin: 4.5% 0%;
 }
 
+
+#markbereich{
+    margin-top: 20%;
+    background-color: transparent;
+    vertical-align: center;
+    horiz-align: left;
+    width: 4%;
+}
+
+.mark{
+    text-align: center;
+
+    margin-top: 50%;
+    color: #000000;
+    background: rgba(255,255,255,1);
+    width: 100%;
+    font-size: 16pt;
+    border-radius: 0 50px 50px 0;
+    min-width: 35pt;
+}

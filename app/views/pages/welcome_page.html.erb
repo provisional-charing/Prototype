@@ -10,34 +10,43 @@
 <p class="zentriert">
 
 </p>
--->
 
 
 <div  class="video-container" >
   <%= video_tag "rotation.mp4", id:"bgvid", autoplay:"", loop:"", muted:"" %>
 </div>
-<div id="title"><h1 ><%= image_tag("title.png" ) %></h1></div>
+-->
 
-<div id="textContainer">
+<div class="image-container" xmlns="http://www.w3.org/1999/html">
+  <%= image_tag "v1" , size: "2048x1080"  %>
+</div>
+
+<div class="verdunkelung">
+
 
   <!--erstelle login und registry in vertikaler order-->
 
   <div id="logReg">
-  <div id="login">
+
     <div id="link">
-    <%= link_to 'Login' , new_user_session_path%>
-  </div>
+      <%= link_to 'Login' , new_user_session_path%>
+
+      <%= link_to 'Registrierung' , new_user_registration_path%>
+    </div>
+
   </div>
 
-  <div id="register">
-    <div id="link">
-      <%= link_to 'Registrierung' , new_user_registration_path%>
-  </div>
-  </div>
-</div>
+
+
+
+<div id="textContainer">
+
+
+  <div id="title"><h1 ><%= image_tag("new logo.png" )  %></h1></div>
+
 
   <!-- erstelle Box für text -->
-  <div id="vision">
+  <div class="textfelder" id="vision1">
     <h1>Vision</h1>
     <p> <br>Vorstellungen werden in traditioneller Ausdrucksweise bezeichnet als bewusstseinsinterne Gegenstände des vorstellend zu Einsichten oder
             zu Erkenntnis von Zusammenhängen gelangenden Denkens.<br>
@@ -46,16 +55,12 @@
             wiederum seinerseits über das von jenem Gedachte informiert wird. (Eine Information stellt ein bestimmtes Wissen dar.)
             Vorstellungen werden in traditioneller Ausdrucksweise bezeichnet als bewusstseinsinterne Gegenstände des vorstellend zu Einsichten oder
             zu Erkenntnis von Zusammenhängen gelangenden Denkens.<br>
-            Real bildet der denkende Mensch aus seinem Erinnerungs- oder auch Vorstellungsmaterial sowohl einfache als auch komplexe, sprachlich
-            mitteilbare Gedankenformen oder eben Gedanken, über die er jemand anderen informieren kann, indem er ihm davon erzählt, so dass dieser
-            wiederum seinerseits über das von jenem Gedachte informiert wird. (Eine Information stellt ein bestimmtes Wissen dar.)
-
 
        </div>
 
 
   <!-- erstelle Box für text -->
-  <div id="vision">
+  <div class="textfelder" id="vision2">
     <h1>Vision II</h1>
     <p> <br>Vorstellungen werden in traditioneller Ausdrucksweise bezeichnet als bewusstseinsinterne Gegenstände des vorstellend zu Einsichten oder
       zu Erkenntnis von Zusammenhängen gelangenden Denkens.<br>
@@ -71,7 +76,35 @@
 
   </div>
 
+  <div class="textfelder" id="vision3">
+    <h1>Vision III</h1>
+    <p> <br>Vorstellungen werden in traditioneller Ausdrucksweise bezeichnet als bewusstseinsinterne Gegenstände des vorstellend zu Einsichten oder
+      zu Erkenntnis von Zusammenhängen gelangenden Denkens.<br>
+      Real bildet der denkende Mensch aus seinem Erinnerungs- oder auch Vorstellungsmaterial sowohl einfache als auch komplexe, sprachlich
+      mitteilbare Gedankenformen oder eben Gedanken, über die er jemand anderen informieren kann, indem er ihm davon erzählt, so dass dieser
+      wiederum seinerseits über das von jenem Gedachte informiert wird. (Eine Information stellt ein bestimmtes Wissen dar.)
+      Vorstellungen werden in traditioneller Ausdrucksweise bezeichnet als bewusstseinsinterne Gegenstände des vorstellend zu Einsichten oder
+      zu Erkenntnis von Zusammenhängen gelangenden Denkens.<br>
+      Real bildet der denkende Mensch aus seinem Erinnerungs- oder auch Vorstellungsmaterial sowohl einfache als auch komplexe, sprachlich
+      mitteilbare Gedankenformen oder eben Gedanken, über die er jemand anderen informieren kann, indem er ihm davon erzählt, so dass dieser
+      wiederum seinerseits über das von jenem Gedachte informiert wird. (Eine Information stellt ein bestimmtes Wissen dar.)
+    </p>
+
+  </div>
+
   <div id="schlusswort"><p>WwHaT@2018</p></div>
 
 </div>
 
+
+  <div id="markbereich">
+
+    <div class="mark" id="point1"> <a href="#vision1" ></a> V I </div>
+    <div class="mark" id="point2"> <a href="#vision2" ></a> V II </div>
+    <div class="mark" id="point3"> <a href="#vision3" ></a> V III </div>
+
+  </div>
+
+
+
+</div>

@@ -4,12 +4,12 @@ Rails.application.routes.draw do
   resources :vaccinations
   resources :projects
   resources :diseases
+
   namespace :admin do
     resources :users
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_for :users
-
 
   authenticated :user do
     root 'pages#test_page'#, as: :authenticated_root
