@@ -1,19 +1,13 @@
 #laufsch
 {
-    padding-bottom: 5px;
-    margin-top: 5px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    position: fixed; bottom: 0em;
-    border-color: white;
-    border-bottom-color: transparent;
-    border-width: 1px;
-    border-style: solid;
-    font-family: "Segoe UI Semibold";
-    width: 99.9%;
-    height: 1em;
+    padding-bottom: 1%;
+    position: fixed;
+    font-family: "Segoe UI Light";
+    width: 100%;
+    bottom: 0%;
+    height: 1.25%;
     color: #ffffff;
     text-align: center; font-style: normal; font-size: 20px;
-    background: rgba(0,0,0, .35);
+    background: rgba(0,0,0, .6);
     z-index: 3;
 }

@@ -172,7 +172,8 @@ body {
     height:100%;
     width: 100%;
     position: absolute;
-    z-index: -1;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .radiobutton {
@@ -307,8 +308,8 @@ padding: 0;
     text-align: center;
 
     margin-top: 50%;
-    color: #000000;
-    background: rgba(255,255,255,1);
+    color: #ffffff;
+    background: rgba(49,165,159,1);
     width: 100%;
     font-size: 16pt;
     border-radius: 0 50px 50px 0;
