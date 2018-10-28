@@ -4,15 +4,15 @@
     color: white;
     text-align: left;
     border: solid 1px white;
-    border-radius: 10px;
     padding: 10pt 10pt 16pt 10pt ;
     line-height: 20pt;
     display: inline-block;
+    float: left;
 }
 
 #anker{
     text-decoration: none;
     color: white;
     font-size: 16pt ;
-    font-family: "Segoe UI Semilight";
+    font-family: "Segoe UI Light";
 }
