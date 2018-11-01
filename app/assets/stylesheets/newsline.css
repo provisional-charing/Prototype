@@ -1,10 +1,6 @@
 #laufsch
 {
     padding-bottom: 1%;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d68c5e17a0c225d99fa589af5ee05b0ebd98bdb8
     padding-left: 1%;
     padding-right: 1%;
     border-radius: 150pt 150pt 0% 0%;
@@ -14,22 +10,8 @@
     bottom: 0%;
     margin-left: 6%;
     height: 1.25%;
-<<<<<<< HEAD
     color: #ffffff;
     text-align: center; font-style: normal; font-size: 14.5pt;
-=======
-    color: #ffffff;
-    text-align: center; font-style: normal; font-size: 14.5pt;
-=======
-    position: fixed;
-    font-family: "Segoe UI Light";
-    width: 100%;
-    bottom: 0%;
-    height: 1.25%;
-    color: #ffffff;
-    text-align: center; font-style: normal; font-size: 20px;
->>>>>>> ecf8c04e0289a8774d344af5d1486bcd371b0bc8
->>>>>>> d68c5e17a0c225d99fa589af5ee05b0ebd98bdb8
     background: rgba(0,0,0, .6);
     z-index: 3;
 }

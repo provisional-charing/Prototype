@@ -1,41 +1,17 @@
 #SeitenfensterLinks{
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d68c5e17a0c225d99fa589af5ee05b0ebd98bdb8
     position: absolute;
     text-align: left !important;
     border-radius: 0 60% 60% 0;
     top: 0%;
     height: 50%;
-<<<<<<< HEAD
-=======
-=======
-
-    position: fixed;
-   text-align: left !important;
-    top: 0%;
-    height: 85.1%;
->>>>>>> ecf8c04e0289a8774d344af5d1486bcd371b0bc8
->>>>>>> d68c5e17a0c225d99fa589af5ee05b0ebd98bdb8
     padding: 5% 1% 1% 2%;
     background: rgba(0, 0, 0, 0.6);
     width: 7%;
     min-width: 180px;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d68c5e17a0c225d99fa589af5ee05b0ebd98bdb8
     margin-top: 7%;
     float:left;
     clear: both;
     z-index: 1;
-=======
-
-    float:left;
-
-    z-index: 3;
->>>>>>> ecf8c04e0289a8774d344af5d1486bcd371b0bc8
 }
 
 #menu{
@@ -52,7 +28,6 @@
     font-size: 1.6em ;
     font-family: "Segoe UI Light";
     text-decoration: none;
-<<<<<<< HEAD
     color: white;
 
 }
@@ -61,22 +36,3 @@
     color: rgba(49,165,159,1);
 }
 
-=======
-<<<<<<< HEAD
-    color: white;
-
-}
-
-#menuLink :hover{
-    color: rgba(49,165,159,1);
-}
-
-=======
-
-}
-
-#menuLink :hover{
-    color: rgba(49,165,159,1);
-}
->>>>>>> ecf8c04e0289a8774d344af5d1486bcd371b0bc8
->>>>>>> d68c5e17a0c225d99fa589af5ee05b0ebd98bdb8
