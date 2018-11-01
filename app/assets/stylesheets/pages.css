@@ -133,6 +133,8 @@ body {
     background-color: rgba(0,0,0,0.2);
     overflow: hidden;
     text-align: center;
+    background: url("v1.jpg") no-repeat center center;
+    background-size: cover;
 
     background-size: cover;
 
