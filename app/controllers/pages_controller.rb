@@ -13,6 +13,10 @@ def test_page
 
 end
 
+  def worldmap_page
+
+  end
+
 def notes_page
   if current_user.notes.first.nil? || !current_user.notes.last.id.nil?
     current_user.notes.build

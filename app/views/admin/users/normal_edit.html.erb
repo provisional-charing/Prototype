@@ -1,12 +1,16 @@
-<div id="gesamtesFenster">
-  <%= image_tag "impfpassBackground.jpg", class: "testIcon" %>
+<div class="image-container" xmlns="http://www.w3.org/1999/html">
+  <%= image_tag "backgroundAfterLogin.jpg" , size: "2048x1080"  %>
+
 </div>
+
+<div class="verdunkelung">
 
 <%= render partial: 'pages/newsline'%>
 
 <%= render partial: 'pages/leftsidepart'%>
 
 <div id="tabellenPlatz">
+  <div id="wikiTitle">Accountinfo</div>
   <%= form_for @user, url: user_normal_update_path(@user), html: {method: :post} do |f| %>
     <% if @user.errors.any? %>
       <div id="error_explanation">
@@ -22,8 +26,6 @@
 
     <div id="reg">
       <fieldset id="regField">
-        <legend id="regLegend">Accountinfo</legend>
-
         <table>
           <tr>
             <td class="regAttribut"><%= f.label :user_name, style: "display: inline" %>
@@ -87,4 +89,5 @@
       </div>
     </div>
   <% end %>
+</div>
 </div>

@@ -13,22 +13,6 @@
     }
 
 
-    .Seitenfenster2{
-      margin: 13% -0 ;
-
-      float: right;
-
-      background: rgba(0,0,0, .35);
-      width: 9vw;
-      bottom: 2em;
-      border-bottom-left-radius: 10px;
-      border-top-left-radius: 10px;
-      padding: 10px 10px 20px 30px;
-      z-index: 2;
-
-    }
-
-
 
 #menuLink *{
   text-decoration: none;
@@ -38,211 +22,7 @@
   font-family: "Segoe UI Light";
 }
 
-#linkToProject{
-  text-decoration: none;
-  color: white;
-}
 
-#TableImpfungen{
-
-  position: fixed;
-  z-index: 1;
-  padding-bottom: 0%;
-  background: rgba(0,0,0,.6);
-  color: white;
-  text-align: left;
-  width: 35%;
-  min-width: 504pt;
-  margin-top: 7%;
-  margin-left: 20%;
-  font-family: "Segoe UI Light";
-  font-size: 14pt;
-
-}
-
-#tabelle{
-  text-align: center;
-
-  width: 100%;
-  margin-bottom: 2%;
-}
-
-#tableHeader{
-  font-size: 18pt;
-  font-family: "Segoe UI";
-  background: rgba(49,165,159,1);
-  padding: 1% 0% 1% 2%;
-  margin-bottom: 2%;
-}
-
-#fälligkeitsdatum{
-  width: 25%;
-  min-width: max-content;
-  text-align: center;
-  padding: 1%;
-}
-
-#name{
- width: 45%;
-  min-width: max-content;
-  text-align: center;
-  padding: 1%;
-}
-
-#schutz{
-width: 30%;
-  min-width: max-content;
-  text-align: center;
-  padding: 1%;
-}
-
-#tabellenzeile{
-
-  padding: 1%;
-  line-height: 18pt;
-}
-
-    #TableReisen{
-
-      position: fixed;
-      z-index: 1;
-      padding-bottom: 0%;
-      background: rgba(0,0,0,.5);
-      color: white;
-      text-align: left;
-      width: 35%;
-      min-width: 504pt;
-      margin-top: 25%;
-      margin-left: 20%;
-      font-family: "Segoe UI Light";
-      font-size: 14pt;
-
-    }
-
-    #reisezeitraum{
-      width: 25%;
-      min-width: max-content;
-      text-align: center;
-      padding: 1%;
-
-    }
-
-    #reiseziel{
-      width: 35%;
-      min-width: max-content;
-      text-align: center;
-      padding: 1%;
-    }
-
-    #flugGebucht{
-      width: 19%;
-      min-width: max-content;
-      text-align: center;
-      padding: 1%;
-    }
-
-    #hotelReserviert{
-      width: 21%;
-      min-width: max-content;
-      text-align: center;
-      padding: 1%;
-    }
-
-   /*unterstütze Projekte*/
-
-    #unterstützeProjekte{
-
-      position: fixed;
-      z-index: 1;
-      background: rgba(0,0,0,.6);
-      color: white;
-      text-align: left;
-      width: 25%;
-      min-width: 360pt;
-      min-height: 428pt;
-      margin-top: 7%;
-      margin-left: 65%;
-      font-family: "Segoe UI Light";
-      font-size: 14pt;
-      max-height: 58.5%;
-      overflow: hidden;
-
-    }
-
-    #overflow{
-      max-height: 390pt;
-      overflow-y: scroll;
-    }
-
-    #artikel{
-      padding: .5% 3% 0% 2.5%;
-      border-width: 0pt 0pt 1pt 0pt;
-      border-style: solid;
-      border-color: white;
-      line-height: 18pt;
-    }
-
-    #artikelHeader{
-      font-size: 16pt;
-      padding-bottom: 12pt;
-
-    }
-
-    #date{
-      font-size: 12pt;
-      font-style: italic;
-      margin: 0%;
-    }
-
-
-
-#newsFeedContent{
-  border-top: 1pt solid white;
-  margin-top: 5%;
-}
-
-
-  #input1{
-    font-size: 1.0em;
-    font-family: "Segoe UI Light";
-    width: 170px;
-    color: white;
-    outline: none;
-    background-color: transparent;
-
-    margin-bottom: 10px;
-    border-color: white;
-    border-radius: 10px;
-    border-width: 1px;
-  }
-
-  #text{
-
-   margin-top: 10px;
-    color: white;
-    font-size: 1.3em ;
-    font-family: "Segoe UI Light";
-  }
-
-
-
-      #suche{
-        width: fit-content;
-        margin-top: 15px;
-        margin-bottom: 10px;
-        padding: 2px 5px 2px 5px;
-        font-family: "Segoe UI Light";
-        font-size: 1.6em;
-        size: auto;
-        color: white;
-        text-align: center;
-        border-radius: 10px;
-        margin-left: 25%;
-        border-color: white;
-        border-width: 1px;
-        border-style: solid;
-
-      }
 
      /*unerlässlich*/
     #map {
@@ -280,11 +60,15 @@ width: 30%;
       width: 400px;
       border-radius: 10px;
       border-style: solid;
+      border-color: white;
       margin-top: 1%;
     }
 
     #pac-input:focus {
       border-color: white;
+      border-radius: 10px;
+      border-style: solid;
+
     }
 
 
@@ -299,13 +83,9 @@ width: 30%;
 
 </div>
 
-<div class="verdunkelung">
 
 <div id="MapFenster">
 
-
-
-  <!--
 
   <input id="pac-input" class="controls" type="text"
          placeholder="Zieleingabe">
@@ -432,7 +212,7 @@ width: 30%;
 
 
 
--->
+
 
   <%= render partial: 'pages/newsline'%>
   <%= render partial: 'pages/leftsidepart'%>
@@ -440,121 +220,6 @@ width: 30%;
 
 
 
-  <!-- Tabelle Bevorstehende Impfungen-->
-
-  <div id="TableImpfungen">
-
-    <header id="tableHeader">Bevorstehende Impfungen</header>
-    <table id="tabelle">
-      <tr id="tabellenzeile">
-        <th id="fälligkeitsdatum">Fälligkeitsdatum</th>
-        <th id="name"> Name</th>
-        <th id="schutz">Impfstoff</th>
-      </tr>
-      <tr id="tabellenzeile" >
-        <td id="tabellenzeile">20.10.2019</td>
-        <td id="tabellenzeile">Tetanus-Impfung</td>
-        <td id="tabellenzeile">Boostrix</td>
-      </tr>
-      <tr id="tabellenzeile">
-        <td id="tabellenzeile">8.10.2019</td>
-        <td id="tabellenzeile">Grippeschutzimpfung</td>
-        <td id="tabellenzeile">Influac</td>
-      </tr>
-      <tr id="tabellenzeile">
-        <td id="tabellenzeile">13.02.2020</td>
-        <td id="tabellenzeile">Poliomyelitis</td>
-        <td id="tabellenzeile">Polio-Vaccinol</td>
-      </tr>
-    </table>
-  </div>
-
-
-<!-- Tabelle geplante Reisen-->
-  <div id="TableReisen">
-
-    <header id="tableHeader">Geplante Reisen</header>
-    <table id="tabelle">
-      <tr id="tabellenzeile">
-        <th id="reisezeitraum">Reisezeitraum</th>
-        <th id="reiseziel"> Reiseziel</th>
-        <th id="flugGebucht">Flug gebucht</th>
-        <th id="hotelReserviert">Hotel reserviert</th>
-      </tr>
-      <tr id="tabellenzeile" >
-        <td id="tabellenzeile">20.10 - 30.10.2019</td>
-        <td id="tabellenzeile">New York</td>
-        <td id="tabellenzeile">Ja</td>
-        <td id="tabellenzeile">Nein</td>
-      </tr>
-      <tr id="tabellenzeile">
-        <td id="tabellenzeile">8.10. - 15.10.2019</td>
-        <td id="tabellenzeile">Griechenland</td>
-        <td id="tabellenzeile">Ja</td>
-        <td id="tabellenzeile">Ja</td>
-      </tr>
-      <tr id="tabellenzeile">
-        <td id="tabellenzeile">13.02. - 15.02.2020</td>
-        <td id="tabellenzeile">Berlin</td>
-        <td id="tabellenzeile">Nein</td>
-        <td id="tabellenzeile">Nein</td>
-      </tr>
-    </table>
-
-  </div>
-
-
-  <!--Info unterstüzte Projekte-->
-  <div id="unterstützeProjekte">
-
-    <header id="tableHeader">
-      Unterstüzte Projekte
-    </header>
-    <div id="overflow">
-    <ul id="newsFeedContent">
-
-        <article id="artikel">
-          <header id="artikelHeader">Forschung Quantencomputer</header>
-          <p>Entwickeln einens QPc für Heimanwender<br>
-          Spendenziel  : 95 %<br>
-          Ende der Unterstützungsmaßnahmen : 15.01.2023</p>
-          <footer>
-            <a id="linkToProject" href="#">Read more</a>
-          </footer>
-        </article>
-
-      <article id="artikel">
-        <header id="artikelHeader">Forschung Quantencomputer</header>
-        <p>Entwickeln einens QPc für Heimanwender<br>
-          Spendenziel  : 95 %<br>
-          Ende der Unterstützungsmaßnahmen : 15.01.2023</p>
-        <footer>
-          <a id="linkToProject" href="#">Read more</a>
-        </footer>
-      </article>
-
-      <article id="artikel">
-        <header id="artikelHeader">Forschung Quantencomputer</header>
-        <p>Entwickeln einens QPc für Heimanwender<br>
-          Spendenziel  : 95 %<br>
-          Ende der Unterstützungsmaßnahmen : 15.01.2023</p>
-        <footer>
-          <a id="linkToProject" href="#">Read more</a>
-        </footer>
-      </article>
-
-      <article id="artikel">
-        <header id="artikelHeader">Forschung Quantencomputer</header>
-        <p>Entwickeln einens QPc für Heimanwender<br>
-          Spendenziel  : 95 %<br>
-          Ende der Unterstützungsmaßnahmen : 15.01.2023</p>
-        <footer>
-          <a id="linkToProject" href="#">Read more</a>
-        </footer>
-      </article>
-    </ul>
-    </div>
-  </div>
 
 <!--rechte Seite
 <div class="Seitenfenster2">
@@ -605,9 +270,6 @@ width: 30%;
 
     -->
 
-</div>
-</div>
-</div>
 </div>
 </html>
 

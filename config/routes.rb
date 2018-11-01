@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   root 'pages#welcome_page'
   get '/welcome',to:'pages#welcome_page'
   get '/main',to:'pages#test_page'
+  get '/world',to:'pages#worldmap_page'
   get '/agb', to:'pages#agb_page'
   get '/note', to:'pages#notes_page', as: :custom_notes
   get '/login', to:'pages#login_page'
@@ -27,6 +28,6 @@ Rails.application.routes.draw do
   get '/wikiMain', to:'diseases#wikiMain_page'
   get '/socialProjects', to: 'projects#sozialeProjekte_page'
   get '/accinfo', to:'admin/users#normal_edit'
-  get 'flysearch', to:'pages#flysearch'
+  get '/flysearch', to:'pages#flysearch'
   post '/user_own_update', to:'admin/users#normal_update', as: :user_normal_update
 end

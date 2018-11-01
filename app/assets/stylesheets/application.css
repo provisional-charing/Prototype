@@ -26,43 +26,44 @@
 
     overflow: hidden;
     position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%,-40%);
+
     z-index: -1;
 }
 
 #inhalt{
-    margin-left: 3vw;
-    margin-top: 2vh;
+    text-align: left;
     color: white;
-    margin-left: 3.5vw;
-    margin-top: 2vh;
-    margin-right: 3.5vw;
+    margin-left: 3.5%;
+    margin-top: 2%;
+    margin-right: 3.5%;
     color: white;
     font-size: 14pt;
     line-height: 20pt;
-    font-family: "Segoe UI Semilight";
+    font-family: "Segoe UI Light" !important;
+    align-items: left !important;
 }
 
 #wikiTitle{
-    margin-top: 2vh;
-    margin-left: 2vw;
+    background-color: rgba(49,165,159,1);
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
     color: white;
-    font-family: "Segoe UI Semilight";
-    font-size: 1.8em;
-    text-decoration: underline;
+    font-family: "Segoe UI Light" !important;
+    font-style: normal;
+    font-size: 26pt;
 }
 
 #tabellenPlatz{
-    height: 85vh;
-    width: 80vw ;
+    clear: both;
+    height: 85%;
+    width: 78% ;
+    max-width: 78%;
     margin: 3%;
-    background: rgba(255,255,255, .35);
+    margin-right: 7%;
+    background: rgba(0,0,0,.6);
     float: right;
-    border-radius: 10px;
     z-index: 1;
-
+    border-radius: 50pt;
     overflow: auto;
     scroll-behavior: auto;
 }

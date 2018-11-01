@@ -1,5 +1,5 @@
 #who{
-    padding: 1vh;
+    background-color: rgba(49,165,159,1);
 }
 
 
@@ -17,27 +17,30 @@
     color: white;
 }
 
+
+
 #tabelleSI{
     border-style: none;
     margin-left: 1.2vw;
     margin-right: 1.2vw;
     margin-top: 1vh;
     margin-bottom: 1vh;
-    width: 77.4vw;
+    width: 97%;
     font-family: "Segoe UI Light";
     background-color: transparent;
 
 }
 
 #tabelleSI th{
-    border: white solid 1px;
+    background: rgba(49,165,159,1);
     padding: 1%;
     color: #ffffff;
     font-weight: bold ;
 }
 
 #tabelleSI td {
-    border: white solid 1px;
+    border: white solid;
+    border-width:  0px 1px 1px 1px;
     padding: 1%;
     color: #ffffff;
     font-weight: bold;

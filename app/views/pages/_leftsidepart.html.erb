@@ -8,29 +8,33 @@
           <li id="menuLink"><%= link_to "Home", "/main" %></li>
           <li id="menuLink"><%= link_to "Impfungen", vaccinations_path %></li>
           <li id="menuLink"><%= link_to "Patienten Impfungen", vaccination_cards_path %></li>
-          <li id="menuLink"><%= link_to "Notizen", "/note" %></li>
-          <li id="menuLink"><%= link_to "soziale Projekte", projects_path %></li>
+          <li id="menuLink"><%= link_to "Weltkarte", "/world" %></li>
+          <li id="menuLink"><%= link_to "Flugsuche", "/flysearch" %></li>
           <li id="menuLink"><%= link_to "Kompendium", "/wikiMain" %></li>
+          <li id="menuLink"><%= link_to "soziale Projekte", projects_path %></li>
           <li id="menuLink"><%= link_to "Krankheiten", diseases_path %></li>
-          <li id="menuLink"><%= link_to "Flugsuche", "flysearch" %></li>
+          <li id="menuLink"><%= link_to "Notizen", "/note" %></li>
+
         <% else if current_user.doc?%>
           <li id="menuLink"><%= link_to "Accountinfo", "/accinfo" %></li>
           <li id="menuLink"><%= link_to "Home", "/main" %></li>
           <li id="menuLink"><%= link_to "Impfungen", vaccinations_path %></li>
           <li id="menuLink"><%= link_to "Patienten Impfungen", vaccination_cards_path %></li>
-          <li id="menuLink"><%= link_to "Notizen", "/note" %></li>
+            <li id="menuLink"><%= link_to "Weltkarte", "/world" %></li>
+            <li id="menuLink"><%= link_to "Flugsuche", "/flysearch" %></li>
+            <li id="menuLink"><%= link_to "Kompendium", "/wikiMain" %></li>
           <li id="menuLink"><%= link_to "soziale Projekte", "/socialProjects" %></li>
-          <li id="menuLink"><%= link_to "Kompendium", "/wikiMain" %></li>
           <li id="menuLink"><%= link_to "Krankheiten", diseases_path %></li>
-            <li id="menuLink"><%= link_to "Flugsuche", "flysearch" %></li>
+            <li id="menuLink"><%= link_to "Notizen", "/note" %></li>
         <% else %>
           <li id="menuLink"><%= link_to "Accountinfo", "/accinfo" %></li>
           <li id="menuLink"><%= link_to "Home", "/main" %></li>
           <li id="menuLink"><%= link_to "Impfungen", "/impfpass" %></li>
-          <li id="menuLink"><%= link_to "Notizen", "/note" %></li>
+            <li id="menuLink"><%= link_to "Weltkarte", "/world" %></li>
+            <li id="menuLink"><%= link_to "Flugsuche", "/flysearch" %></li>
+            <li id="menuLink"><%= link_to "Kompendium", "/wikiMain" %></li>
           <li id="menuLink"><%= link_to "soziale Projekte", "/socialProjects" %></li>
-          <li id="menuLink"><%= link_to "Kompendium", "/wikiMain" %></li>
-            <li id="menuLink"><%= link_to "Flugsuche", "flysearch" %></li>
+            <li id="menuLink"><%= link_to "Notizen", "/note" %></li>
         <% end %><% end %>
         <li id="menuLink"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
       <% end %>
