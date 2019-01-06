@@ -22,6 +22,10 @@
 
 }
 
+.inline{
+    display: inline;
+}
+
 #gesamtesFenster{
 
     overflow: hidden;
@@ -66,4 +70,36 @@
     border-radius: 50pt;
     overflow: auto;
     scroll-behavior: auto;
+}
+
+.dt-table-link-border{
+    display: inline-block;
+    padding: 5px;
+    padding-top: 1px;
+    font-family: "Segoe UI Light";
+    font-size: 13pt;
+    /*margin-bottom: 8%;*/
+    color: white;
+    text-align: center;
+
+    border-color: white;
+    border-width: 1.5px;
+    border-style: solid;
+}
+
+.dt-table-link{
+    padding: 1%;
+    font-family: "Segoe UI Light";
+    font-size: 16px;
+    border-style: none;
+    text-decoration: none;
+    background-color: transparent;
+    color: inherit;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.dt-table-link-border:hover{
+    color: black;
+    background-color: rgba(255,255,255,0.5);
 }

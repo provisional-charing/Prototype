@@ -1,8 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="image-container" xmlns="http://www.w3.org/1999/html">
+  <%= image_tag "backgroundAfterLogin.jpg" , size: "2048x1080"  %>
 
-<h1>Users</h1>
+</div>
 
-<table>
+<div class="verdunkelung">
+
+  <%= render partial: 'pages/leftsidepart'%>
+  <p id="notice"><%= notice %></p>
+  <div id="tabellenPlatz">
+    <div id="wikiTitle">Users</div>
+
+
+<h1></h1>
+
+<table id="usertable">
   <thead>
     <tr>
       <th>Username</th>
@@ -26,14 +37,24 @@
         <td><%= user.is_not_given? user.phone%></td>
         <td><%= user.is_not_given? user.age%></td>
         <td><%= user.role%></td>
-        <td><%= link_to 'Show', admin_user_path(user) %></td>
-        <td><%= link_to 'Edit', edit_admin_user_path(user) %></td>
-        <td><%= link_to 'Destroy', admin_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <div class="dt-table-link-border">
+            <%= link_to 'edit', edit_admin_user_path(user), class: "dt-table-link" %>
+          </div>
+        </td>
+        <td>
+          <div class="dt-table-link-border">
+            <%= link_to 'delete', admin_user_path(user), class:"dt-table-link", method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New User', new_admin_user_path %>
+    <div class="dt-table-link-border">
+      <%= link_to 'create new user', new_admin_user_path, class:"dt-table-link" %>
+    </div>
+  </div>
+</div>

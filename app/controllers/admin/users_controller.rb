@@ -1,8 +1,8 @@
 class Admin::UsersController < ApplicationController
 before_action :authenticate_user!
-before_action :set_user, only: [:edit]
+before_action :set_user, only: [:show, :edit, :update]
 before_action :set_current_user, only: [:normal_edit, :normal_update]
-before_action :check_classification_admin, only:[:index,:new,:create,:update]
+before_action :check_classification_admin, only:[:index,:new,:edit,:create,:update]
 
   # GET /tests
   # GET /tests.json
@@ -43,9 +43,10 @@ before_action :check_classification_admin, only:[:index,:new,:create,:update]
 
 
   def update
+    update_params = user_all_params[:password].blank??user_all_params.except(:password):user_all_params
     respond_to do |format|
-      if @user.update(user_all_params.except[:password_confirmation])
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+      if @user.update(update_params)
+        format.html { redirect_to admin_users_path, notice: 'User was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

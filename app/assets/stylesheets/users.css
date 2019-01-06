@@ -84,3 +84,29 @@
     padding: 20px 20px 50px 20px;
     border: none;
 }
+
+#usertable, #usertable thead tr, #usertable tbody tr{
+    color: white;
+    background-color:rgba(255, 255, 255, 0.1)!important;
+}
+
+#user_edit_Field{
+    margin-left: 350px;
+    padding: 20px 20px 50px 20px;
+    border: none;
+}
+
+.editInput{
+    color: white;
+    font-family: "Segoe UI Light";
+    font-size: 14pt;
+    outline: none;
+    background-color: transparent;
+    width: 90%;
+    border-color: white;
+    min-width: 200pt;
+    border-width: 2px;
+    padding: 1%;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+}
