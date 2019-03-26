@@ -24,8 +24,8 @@ default: &default
 
 development:
   <<: *default
-  database: Webapp_software_project_2018
-  username: Webapp_2018
+  database: <%= ENV['WEBAPP_DATABASE_NAME'] %>
+  username: <%= ENV['WEBAPP_DATABASE_USER'] %>
   password: <%= ENV['WEBAPP_DATABASE_PASSWORD'] %>
 
   # The specified database role being used to connect to postgres.
@@ -60,8 +60,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: Webapp_software_project_2018
-  username: Webapp_2018
+  database: <%= ENV['WEBAPP_DATABASE_NAME'] %>
+  username: <%= ENV['WEBAPP_DATABASE_USER'] %>
   password: <%= ENV['WEBAPP_DATABASE_PASSWORD'] %>
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -85,6 +85,6 @@ test:
 #
 production:
   <<: *default
-  database: Webapp_software_project_2018
-  username: Webapp_2018
+  database: <%= ENV['WEBAPP_DATABASE_NAME'] %>
+  username: <%= ENV['WEBAPP_DATABASE_USER'] %>
   password: <%= ENV['WEBAPP_DATABASE_PASSWORD'] %>

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @map_entry.name %>
+</p>
+
+<p>
+  <strong>Plz:</strong>
+  <%= @map_entry.plz %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @map_entry.location %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @map_entry.street %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @map_entry.phone %>
+</p>
+
+<p>
+  <strong>Spec:</strong>
+  <%= @map_entry.spec %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @map_entry.lat %>
+</p>
+
+<p>
+  <strong>Lng:</strong>
+  <%= @map_entry.lng %>
+</p>
+
+<%= link_to 'Edit', edit_map_entry_path(@map_entry) %> |
+<%= link_to 'Back', map_entries_path %>
