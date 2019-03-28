@@ -8,34 +8,74 @@ body {
 }
 
 
+#company{
+    font-family: "Calibri" !important;
+    font-size: 20pt;
+    color: black;
+    text-align: left !important;
+}
+
+
+.headline{
+    font-family: "Calibri Light" !important;
+    text-align: center;
+    font-size: 32pt;
+}
+
 #title {
+    font-family: "Calibri" !important;
+    width: 100%;
+    height : 60%;
+    text-align: left;
+    line-height: 50pt;
+    font-size: 32pt;
+    color: white;
     position: absolute;
-    margin-top: 10%;
-    margin-left: 30%;
+    padding-top: 15%;
+    padding-left: 10%;
+    background-image: url("v1.jpg");
+    background-size: cover;
+    background-position-y: 60%;
 
 }
 
+#titleHelp {
+
+    font-family: "Calibri" !important;
+    text-align: left;
+    line-height: 20pt;
+    font-size: 20pt;
+    color: white;
+}
+
 #logReg{
-    width: 98%;
-    height: 2.5%;
-    background-color: rgba(0,0,0,0.8);
+    width: 97.1%;
+    height: 4%;
+    background-color: white;
     position: absolute;
     text-align: right;
     float: left;
     z-index: 3;
+    padding-top: 0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+
 
 
 }
 
+#shift{
+    margin-left: 10%;
+}
 
 #textContainer{
     position: absolute;
-    width: 95%;
     height: 100%;
+    width: 100%;
     overflow: auto;
     overflow-x: hidden;
-    margin-left: 5%;
     z-index: 2;
+    background-color: white;
 }
 
 
@@ -66,45 +106,98 @@ body {
 
 #link *{
     text-decoration: none;
-    color: white;
-    padding-right: 0.5%;
+    color: black;
+    padding-right: 1.5%;
+    display: inline;
 }
 
 #vision1{
+    font-family: "Calibri" !important;
+    text-align: center;
+    line-height: 25pt;
+    padding: 2% 1% 0.5% 1%;
+    margin-bottom: 5%;
+}
+
+#visionii{
+    font-family: "Calibri" !important;
+    height: 70%;
     text-align: left;
-    padding: 0.5% 1% 0.5% 1%;
-    background-color:rgba(0,0,0,0.5);
-    color: white;
-    font-family: "Segoe UI Light";
-    font-size: 14pt ;
-    margin-top: 90%;
+    line-height: 25pt;
+    padding: 2% 1% 0.5% 1%;
+    background-image: url("feature1k.png");
+    background-size: cover;
+}
+
+#contentVisii{
+    margin: 3%;
+    margin-top: 10%;
+    background-color: rgba(255,255,255,0.8);
+    padding: 2%;
+    font-family: "Calibri";
+    color: black;
+    text-align: left !important;
+    width: 33%;
+    font-size: 16pt;
+    line-height: 25pt;
+}
+
+#vision3a{
+    font-family: "Calibri" !important;
+    width: 100%;
+    height: 60%;
+    text-align: right;
+    line-height: 25pt;
+    padding: 3%;
+    background-image: url("planet.png");
+    background-repeat: no-repeat;
+    background-position-y: 23%;
+    background-position-x: 10%;
+
+
+}
+
+#contentVis3a{
+    margin: 3%;
+    margin-top: 6%;
+    padding: 2%;
+    margin-left: 55%;
+    font-family: "Calibri";
+    color: black;
+    text-align: right !important;
+    width: 30%;
+    font-size: 16pt;
+    line-height: 25pt;
+}
+
+#vision4a{
+    font-family: "Calibri" !important;
+    width: 100%;
+    height: 60%;
+    text-align: left;
+    line-height: 25pt;
+    padding: 3%;
+    background-image: url("quantum_computer_feature.jpg");
+    background-size: cover;
+    background-color: rgba(255,255,255,0.6);
+
 }
 
 .textfelder {
-    text-align: left;
+    text-align: center;
     padding: 0.5% 1% 0.5% 1%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-family: "Segoe UI Light";
-    font-size: 14pt;
-    margin-top: 50%;
+    color: black;
+    font-size: 16pt;
+    margin-top: 49%;
 }
 
 #schlusswort{
 
-
     text-align: center;
-    left: -25px;
-    right: 0;
-    top: -25px;
-    bottom: 0;
-
-    padding : 0px 5px 5px 10px;
-    color: white;
-    font-family: "Segoe UI Light";
-    font-size: 1.2em ;
-    margin-top: 40vh;
-    border-radius : 25px;
+    padding : 2%;
+    color: black;
+    font-family: "Segoe UI Semibold";
+    font-size: 16pt ;
 
 
 }

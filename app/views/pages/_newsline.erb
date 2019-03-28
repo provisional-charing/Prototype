@@ -1,3 +1,19 @@
+var nachricht=" ACHTUNG!!!! 0% Finanzierung ab 100€  Nur Heute 25% auf Tiernahrung  TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST "
+var text
+var verzoegerung=90
+var timerId
+function ticker() {
+text=nachricht
+document.frm.ticker.value=text
+nachricht=nachricht.substring (1, nachricht.length) + nachricht.substring (0, 1)
+timerId=setTimeout("ticker()", verzoegerung)
+}
+window.onload=ticker;
 <div id="laufsch">
-  <marquee position="bottom" direction="left" bgcolor="transparent" scrollamount="10" scrolldelay="100">Achtung: Grippewelle in Deutschland</marquee>
+  <form name="frm">
+    <input type="text" name="ticker" style="text-align: center; color: #ffffff;background: rgba(0, 0, 0, 0);length: 100%; width:100%;border:0px;font-size:12px;padding:5px;height:30px;">
+  </form>
 </div>
+#frm{
+font-size: 20pt;
+}

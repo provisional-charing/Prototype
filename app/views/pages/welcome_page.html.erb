@@ -28,8 +28,15 @@
 
   <div id="logReg">
 
+
+
     <div id="link">
+      <p  id="company" style="display: inline; float: left !important;"> World Wide Health And Travel </p>
       <%= link_to 'Login' , new_user_session_path%>
+
+      <%= link_to 'FAQ' , new_user_session_path%>
+
+      <%= link_to 'Blog' , new_user_session_path%>
 
       <%= link_to 'Registrierung' , new_user_registration_path%>
     </div>
@@ -42,54 +49,59 @@
 <div id="textContainer">
 
 
-  <div id="title"><h1 ><%= image_tag("new logo.png" )  %></h1></div>
+  <div id="title">
 
+  <p>Eine umfassende Plattform für<br>
+    globale Unterstützung &<br>
+    Ihre Gesundheit<br>
+    <div id="titleHelp">unterstützt von Google Maps API </div>
+  </p>
+  </div>
 
   <!-- erstelle Box für text -->
   <div class="textfelder" id="vision1">
-    <h1>Vision</h1>
-    <p> <br>Vorstellungen werden in traditioneller Ausdrucksweise bezeichnet als bewusstseinsinterne Gegenstände des vorstellend zu Einsichten oder
-            zu Erkenntnis von Zusammenhängen gelangenden Denkens.<br>
-            Real bildet der denkende Mensch aus seinem Erinnerungs- oder auch Vorstellungsmaterial sowohl einfache als auch komplexe, sprachlich
-            mitteilbare Gedankenformen oder eben Gedanken, über die er jemand anderen informieren kann, indem er ihm davon erzählt, so dass dieser
-            wiederum seinerseits über das von jenem Gedachte informiert wird. (Eine Information stellt ein bestimmtes Wissen dar.)
-            Vorstellungen werden in traditioneller Ausdrucksweise bezeichnet als bewusstseinsinterne Gegenstände des vorstellend zu Einsichten oder
-            zu Erkenntnis von Zusammenhängen gelangenden Denkens.<br>
+    <h1 class="headline"> Entdecken Sie unsere Welt !</h1>
+    <p> <br> Mit unserer Plattform erhalten Sie eine bisher unerreichte Sicherheit auf all Ihren Reisen durch regelmäßige Nachrichten über die aktuelle Region,<br>
+      Frühwarnungen und dem digitalen Impfpass. Und das Beste, unterstützen Sie dabei globale Projekte um die Welt lebenswerter zu gestalten.<br><br><br>
+
+      <%= image_tag("leistungen.png" )  %>
+
 
        </div>
 
 
   <!-- erstelle Box für text -->
-  <div class="textfelder" id="vision2">
-    <h1>Vision II</h1>
-    <p> <br>Vorstellungen werden in traditioneller Ausdrucksweise bezeichnet als bewusstseinsinterne Gegenstände des vorstellend zu Einsichten oder
-      zu Erkenntnis von Zusammenhängen gelangenden Denkens.<br>
-      Real bildet der denkende Mensch aus seinem Erinnerungs- oder auch Vorstellungsmaterial sowohl einfache als auch komplexe, sprachlich
-      mitteilbare Gedankenformen oder eben Gedanken, über die er jemand anderen informieren kann, indem er ihm davon erzählt, so dass dieser
-      wiederum seinerseits über das von jenem Gedachte informiert wird. (Eine Information stellt ein bestimmtes Wissen dar.)
-      Vorstellungen werden in traditioneller Ausdrucksweise bezeichnet als bewusstseinsinterne Gegenstände des vorstellend zu Einsichten oder
-      zu Erkenntnis von Zusammenhängen gelangenden Denkens.<br>
-      Real bildet der denkende Mensch aus seinem Erinnerungs- oder auch Vorstellungsmaterial sowohl einfache als auch komplexe, sprachlich
-      mitteilbare Gedankenformen oder eben Gedanken, über die er jemand anderen informieren kann, indem er ihm davon erzählt, so dass dieser
-      wiederum seinerseits über das von jenem Gedachte informiert wird. (Eine Information stellt ein bestimmtes Wissen dar.)
-      </p>
+  <div id="visionii">
 
+    <div id="contentVisii">
+      <h1 class="headline" style="text-align: left !important;">Alle wichtigen Infos auf einen Blick</h1>
+      <p><br>Egal wohin Sie möchten, haben Sie die momentane Situation der Region im
+        Blick. Falls sich Ihre Gesundheit verschlechtert, sehen <br> Sie auch Ärzte
+        in Ihrer Umgebung.
+      </p>
+    </div>
   </div>
 
-  <div class="textfelder" id="vision3">
-    <h1>Vision III</h1>
-    <p> <br>Vorstellungen werden in traditioneller Ausdrucksweise bezeichnet als bewusstseinsinterne Gegenstände des vorstellend zu Einsichten oder
-      zu Erkenntnis von Zusammenhängen gelangenden Denkens.<br>
-      Real bildet der denkende Mensch aus seinem Erinnerungs- oder auch Vorstellungsmaterial sowohl einfache als auch komplexe, sprachlich
-      mitteilbare Gedankenformen oder eben Gedanken, über die er jemand anderen informieren kann, indem er ihm davon erzählt, so dass dieser
-      wiederum seinerseits über das von jenem Gedachte informiert wird. (Eine Information stellt ein bestimmtes Wissen dar.)
-      Vorstellungen werden in traditioneller Ausdrucksweise bezeichnet als bewusstseinsinterne Gegenstände des vorstellend zu Einsichten oder
-      zu Erkenntnis von Zusammenhängen gelangenden Denkens.<br>
-      Real bildet der denkende Mensch aus seinem Erinnerungs- oder auch Vorstellungsmaterial sowohl einfache als auch komplexe, sprachlich
-      mitteilbare Gedankenformen oder eben Gedanken, über die er jemand anderen informieren kann, indem er ihm davon erzählt, so dass dieser
-      wiederum seinerseits über das von jenem Gedachte informiert wird. (Eine Information stellt ein bestimmtes Wissen dar.)
-    </p>
+  <div id="vision3a">
+    <div id="contentVis3a">
+      <h1 class="headline" style="text-align: right !important;">Planen Sie eine Reise ?</h1>
+      <p><br>Nutzen Sie doch gleich den online Reiseplaner
+                   und finden Sie die ideale Unterkunft inklusive
+                   Flug für Ihren Aufenthalt.
+                   Bevor Sie etwas vergessen, schreiben Sie es sich
+                   als Notiz zu Ihrer Reise hinzu.
+      </p>
 
+    </div>
+  </div>
+
+
+  <div id="vision4a">
+    <div id="contentVisii">
+      <h1 class="headline" style="text-align: left !important;">Bleiben Sie geschützt</h1>
+      <p><br>Nach jahrelanger Forschung sind wir stolz darauf, Ihnen berichten zu können, dass ihre Daten, dank der verwendeten Quantentechnologie, auch in Zukunft in besten Händen sind.
+      </p>
+    </div>
   </div>
 
   <div id="schlusswort"><p>WwHaT@2018</p></div>
