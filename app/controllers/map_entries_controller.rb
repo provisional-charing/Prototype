@@ -1,4 +1,6 @@
 class MapEntriesController < ApplicationController
+  before_action :authenticate_user!
+  before_action :check_classification_admin
   before_action :set_map_entry, only: [:show, :edit, :update, :destroy]
 
   # GET /map_entries
@@ -59,6 +61,18 @@ class MapEntriesController < ApplicationController
       format.html { redirect_to map_entries_url, notice: 'Map entry was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def search
+    search = params[:search]
+    a=[]
+    @map_entries = MapEntry.all
+    @map_entries.each do |e|
+      if e.spec == search.spec
+        a << e
+      end
+    end
+    a.to_json
   end
 
   private
