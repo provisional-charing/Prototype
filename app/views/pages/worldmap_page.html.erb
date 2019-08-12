@@ -14,17 +14,17 @@
 
 
 
-#menuLink *{
-  text-decoration: none;
-  color: white;
-  line-height: 2.0em;
-  font-size: 1.6em ;
-  font-family: "Segoe UI Light";
-}
+    #menuLink *{
+      text-decoration: none;
+      color: white;
+      line-height: 2.0em;
+      font-size: 1.6em ;
+      font-family: "Segoe UI Light";
+    }
 
 
 
-     /*unerlässlich*/
+    /*unerlässlich*/
     #map {
       height: 100%;
 
@@ -73,38 +73,38 @@
     }
 
 
-      #oberesSuchfeld{
-        padding-top: 0.25%;
-        padding-bottom: 0.25%;
-        padding-left: 1%;
-        padding-right: 1%;
-        border-radius: 0% 0% 20px 20px;
-        position: fixed;
-        font-family: "Segoe UI Light" !important;
-        width: 65%;
-        top: 0%;
-        margin-left: 16%;
-        height: 3%;
-        color: #ffffff;
-        text-align: center; font-style: normal; font-size: 14.5pt;
-        background: rgba(0,0,0, .6);
-        z-index: 3;
-      }
+    #oberesSuchfeld{
+      padding-top: 0.25%;
+      padding-bottom: 0.25%;
+      padding-left: 1%;
+      padding-right: 1%;
+      border-radius: 0% 0% 20px 20px;
+      position: fixed;
+      font-family: "Segoe UI Light" !important;
+      width: 65%;
+      top: 0%;
+      margin-left: 16%;
+      height: 3%;
+      color: #ffffff;
+      text-align: center; font-style: normal; font-size: 14.5pt;
+      background: rgba(0,0,0, .6);
+      z-index: 3;
+    }
 
-      #pac-input2{
-        margin-left: 1.5%;
-        background-color: #fff;
-        font-family: "Segoe UI Light";
-        font-size: 17px;
-        font-weight: 300;
-        padding: 0 11px 0 13px;
-        text-overflow: ellipsis;
+    #pac-input2{
+      margin-left: 1.5%;
+      background-color: #fff;
+      font-family: "Segoe UI Light";
+      font-size: 17px;
+      font-weight: 300;
+      padding: 0 11px 0 13px;
+      text-overflow: ellipsis;
 
-        border-radius: 30px;
-        border-style: solid;
-        border-color: white;
-        z-index: 4;
-      }
+      border-radius: 30px;
+      border-style: solid;
+      border-color: white;
+      z-index: 4;
+    }
 
     #arztcombo{
       margin-left: 1.5%;
@@ -121,9 +121,9 @@
       z-index: 4;
     }
 
-      #rButton1{
-       margin-left: 1.5%;
-      }
+    #rButton1{
+      margin-left: 1.5%;
+    }
 
   </style>
 
@@ -142,7 +142,7 @@
            placeholder="Zieleingabe">
 
     <input id="rButton" type="radio" name="hospital" value="Krankenhaus"> Krankenhaus
-        <input id="rButton1" type="radio" name="aerzte" value="Ärzte"> Arzt
+    <input id="rButton1" type="radio" name="aerzte" value="Ärzte"> Arzt
 
     <select id="arztcombo" onchange=getAt()>
       <option>Alle Fachrichtungen</option>
@@ -211,7 +211,7 @@
 
           var map;
 
-          if(new Date().getHours() > 6 && new Date().getHours() < 23) {
+          if(new Date().getHours() > 6 && new Date().getHours() < 22) {
 
               map = new google.maps.Map(document.getElementById('map'), {
                   mapTypeControl: false,
@@ -222,89 +222,89 @@
 
           else {
 
-               map = new google.maps.Map(document.getElementById('map'), {
+              map = new google.maps.Map(document.getElementById('map'), {
                   mapTypeControl: false,
                   zoom: 17,
-                   styles: [
-                       {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-                       {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-                       {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-                       {
-                           featureType: 'administrative.locality',
-                           elementType: 'labels.text.fill',
-                           stylers: [{color: '#d59563'}]
-                       },
-                       {
-                           featureType: 'poi',
-                           elementType: 'labels.text.fill',
-                           stylers: [{color: '#d59563'}]
-                       },
-                       {
-                           featureType: 'poi.park',
-                           elementType: 'geometry',
-                           stylers: [{color: '#263c3f'}]
-                       },
-                       {
-                           featureType: 'poi.park',
-                           elementType: 'labels.text.fill',
-                           stylers: [{color: '#6b9a76'}]
-                       },
-                       {
-                           featureType: 'road',
-                           elementType: 'geometry',
-                           stylers: [{color: '#38414e'}]
-                       },
-                       {
-                           featureType: 'road',
-                           elementType: 'geometry.stroke',
-                           stylers: [{color: '#212a37'}]
-                       },
-                       {
-                           featureType: 'road',
-                           elementType: 'labels.text.fill',
-                           stylers: [{color: '#9ca5b3'}]
-                       },
-                       {
-                           featureType: 'road.highway',
-                           elementType: 'geometry',
-                           stylers: [{color: '#746855'}]
-                       },
-                       {
-                           featureType: 'road.highway',
-                           elementType: 'geometry.stroke',
-                           stylers: [{color: '#1f2835'}]
-                       },
-                       {
-                           featureType: 'road.highway',
-                           elementType: 'labels.text.fill',
-                           stylers: [{color: '#f3d19c'}]
-                       },
-                       {
-                           featureType: 'transit',
-                           elementType: 'geometry',
-                           stylers: [{color: '#2f3948'}]
-                       },
-                       {
-                           featureType: 'transit.station',
-                           elementType: 'labels.text.fill',
-                           stylers: [{color: '#d59563'}]
-                       },
-                       {
-                           featureType: 'water',
-                           elementType: 'geometry',
-                           stylers: [{color: '#17263c'}]
-                       },
-                       {
-                           featureType: 'water',
-                           elementType: 'labels.text.fill',
-                           stylers: [{color: '#515c6d'}]
-                       },
-                       {
-                           featureType: 'water',
-                           elementType: 'labels.text.stroke',
-                           stylers: [{color: '#17263c'}]
-                       }
-                   ]
+                  styles: [
+                      {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+                      {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+                      {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+                      {
+                          featureType: 'administrative.locality',
+                          elementType: 'labels.text.fill',
+                          stylers: [{color: '#d59563'}]
+                      },
+                      {
+                          featureType: 'poi',
+                          elementType: 'labels.text.fill',
+                          stylers: [{color: '#d59563'}]
+                      },
+                      {
+                          featureType: 'poi.park',
+                          elementType: 'geometry',
+                          stylers: [{color: '#263c3f'}]
+                      },
+                      {
+                          featureType: 'poi.park',
+                          elementType: 'labels.text.fill',
+                          stylers: [{color: '#6b9a76'}]
+                      },
+                      {
+                          featureType: 'road',
+                          elementType: 'geometry',
+                          stylers: [{color: '#38414e'}]
+                      },
+                      {
+                          featureType: 'road',
+                          elementType: 'geometry.stroke',
+                          stylers: [{color: '#212a37'}]
+                      },
+                      {
+                          featureType: 'road',
+                          elementType: 'labels.text.fill',
+                          stylers: [{color: '#9ca5b3'}]
+                      },
+                      {
+                          featureType: 'road.highway',
+                          elementType: 'geometry',
+                          stylers: [{color: '#746855'}]
+                      },
+                      {
+                          featureType: 'road.highway',
+                          elementType: 'geometry.stroke',
+                          stylers: [{color: '#1f2835'}]
+                      },
+                      {
+                          featureType: 'road.highway',
+                          elementType: 'labels.text.fill',
+                          stylers: [{color: '#f3d19c'}]
+                      },
+                      {
+                          featureType: 'transit',
+                          elementType: 'geometry',
+                          stylers: [{color: '#2f3948'}]
+                      },
+                      {
+                          featureType: 'transit.station',
+                          elementType: 'labels.text.fill',
+                          stylers: [{color: '#d59563'}]
+                      },
+                      {
+                          featureType: 'water',
+                          elementType: 'geometry',
+                          stylers: [{color: '#17263c'}]
+                      },
+                      {
+                          featureType: 'water',
+                          elementType: 'labels.text.fill',
+                          stylers: [{color: '#515c6d'}]
+                      },
+                      {
+                          featureType: 'water',
+                          elementType: 'labels.text.stroke',
+                          stylers: [{color: '#17263c'}]
+                      }
+                  ]
               });
 
           }
@@ -320,7 +320,14 @@
 
                   map.setCenter(pos);
 
-                  var myPosition = new google.maps.Marker({
+                  var myPosition;
+
+                  if(myPosition != null) {
+
+                     myPosition = null;}
+
+
+                     myPosition = new google.maps.Marker({
                       position: pos,
                       title: 'Sie sind hier',
                       map: map
@@ -355,12 +362,12 @@
 
               var s = aTyp.value;
 
-           //   var query = "SELECT * FROM 1ndijBYhlNzs-voaZF9aijLW_7Q5khq9ZgyujxkTA WHERE " + s;
+              //   var query = "SELECT * FROM 1ndijBYhlNzs-voaZF9aijLW_7Q5khq9ZgyujxkTA WHERE " + s;
 
               //query = encodeURIComponent(query);
 
 
-            var list = getDoctor(s);
+              var list = getDoctor(s);
 
               /*
               $.getJSON("https://docs.google.com/spreadsheets/d/1j5A4oU3wljStoUJvo65qbX2WK4FRgjvH02h3EfYf8Ww/gviz/tq?tq=")
@@ -378,55 +385,54 @@
                     //select%20*%20where%20Fachbereich%3D'Allgemeinmedizin'
 */
 
-                    var createMarker = function(coordinate, name, ort, strasse,tel, fachbereich){
+              var createMarker = function(coordinate, name, ort, strasse,tel, fachbereich){
 
-                       var image = {
-                            url: "https://upload.wikimedia.org/wikipedia/en/b/b5/Wireless-icon.png",
-                            // This marker is 20 pixels wide by 32 pixels high.
-                            size: new google.maps.Size(30, 37),
-                            // The origin for this image is (0, 0).
-                            origin: new google.maps.Point(0, 0),
-                            // The anchor for this image is the base of the flagpole at (0, 32).
-                            anchor: new google.maps.Point(0, 37)
-                        };
+                  var image = {
+                      url: "https://upload.wikimedia.org/wikipedia/en/b/b5/Wireless-icon.png",
+                      // This marker is 20 pixels wide by 32 pixels high.
+                      size: new google.maps.Size(30, 37),
+                      // The origin for this image is (0, 0).
+                      origin: new google.maps.Point(0, 0),
+                      // The anchor for this image is the base of the flagpole at (0, 32).
+                      anchor: new google.maps.Point(0, 37)
+                  };
 
-                        var m = new google.maps.Marker({
-                            map: map,
-                            position: coordinate,
-                            icon : 'https://i.ibb.co/SrJdfkt/doctor-icon.png'
-                        });
+                  var m = new google.maps.Marker({
+                      map: map,
+                      position: coordinate,
+                      icon : 'https://i.ibb.co/SrJdfkt/doctor-icon.png'
+                  });
 
-                        markers.push(m);
+                  markers.push(m);
 
-                        google.maps.event.addListener(m, "click", function () {
+                  google.maps.event.addListener(m, "click", function () {
 
-                            var image = { url: 'https://i.ibb.co/NtVCxDY/bildDoc.png'};
+                      var image = { url: 'https://i.ibb.co/NtVCxDY/bildDoc.png'};
 
-                            var infowindow0 = new google.maps.InfoWindow();
-                            infowindow0.setPosition(coordinate);
-                           /* infowindow0.setContent("<div style='float:'><img src='https://i.ibb.co/NtVCxDY/bildDoc.png'></div>" + "<div> </br>  'Name: '  </br> name  <br>
-                                <br>  'Ort: '    </br> ort  ,  strasse <br> +
-                                <br> Telefonnummer: </br>  tel  <br>
-                                <br> Fachbereich: </br> fachbereich  </div>);
-                            infowindow0.open(map, m);
-*/
-                        });
-                    };
+                      var infowindow0 = new google.maps.InfoWindow();
+                      infowindow0.setPosition(coordinate);
+                      infowindow0.setContent("<div align='center'><img src='https://i.ibb.co/NtVCxDY/bildDoc.png'></div>" + "</br><b>Name:</b> " + name + "</br></br>" +
+                          "<b>Ort:</b> " + ort + " , " + strasse + "</br></br>" + "<b>Telefonnummer:</b> "
+                          + tel + "</br></br>" + "<b>Fachbereich:</b> " + fachbereich + "</br>" );
+                      infowindow0.open(map, m);
 
+                  });
+              };
 
 
-                        for(var i=0; i < list.length; i++){
-                            var lat = list[i][5];
-                            var lng = list[i][6];
-                            var coordinate = new google.maps.LatLng(lat, lng);
-                            var name = list[i][0];
-                            var ort = list[i][1];
-                            var strasse = list[i][2];
-                            var tel = list[i][3];
-                            var fachbereich = list[i][4];
 
-                            createMarker(coordinate, name, ort, strasse, tel, fachbereich);
-                        }
+              for(var i=0; i < list.length; i++){
+                  var lat = list[i][5];
+                  var lng = list[i][6];
+                  var coordinate = new google.maps.LatLng(lat, lng);
+                  var name = list[i][0];
+                  var ort = list[i][1];
+                  var strasse = list[i][2];
+                  var tel = list[i][3];
+                  var fachbereich = list[i][4];
+
+                  createMarker(coordinate, name, ort, strasse, tel, fachbereich);
+              }
 
 
 
@@ -547,33 +553,33 @@
           });
           layer.setMap(map);
 
-/*
-          var layer1 = new google.maps.FusionTablesLayer();
+          /*
+                    var layer1 = new google.maps.FusionTablesLayer();
 
-               layer1 = new google.maps.FusionTablesLayer({
-                  query: {
-                      select: '\'Geocodable address\'',
-                      from: '1ndijBYhlNzs-voaZF9aijLW_7Q5khq9ZgyujxkTA',
+                         layer1 = new google.maps.FusionTablesLayer({
+                            query: {
+                                select: '\'Geocodable address\'',
+                                from: '1ndijBYhlNzs-voaZF9aijLW_7Q5khq9ZgyujxkTA',
 
-                  }
+                            }
 
-              });*/
+                        });*/
 
 
 
-               /*
-              if( document.getElementById("pac-input2").options[document.getElementById("pac-input2").selectedIndex].text !== "Alle Fachrichtungen") {
+          /*
+         if( document.getElementById("pac-input2").options[document.getElementById("pac-input2").selectedIndex].text !== "Alle Fachrichtungen") {
 
-                  layer1 = new google.maps.FusionTablesLayer({
-                      query: {
-                          select: '\'Geocodable address\'',
-                          from: '1ndijBYhlNzs-voaZF9aijLW_7Q5khq9ZgyujxkTA',
+             layer1 = new google.maps.FusionTablesLayer({
+                 query: {
+                     select: '\'Geocodable address\'',
+                     from: '1ndijBYhlNzs-voaZF9aijLW_7Q5khq9ZgyujxkTA',
 
-                      }
+                 }
 
-                  });
+             });
 
-              }*/
+         }*/
 
 
 
@@ -586,7 +592,7 @@
 
 
 
-              /* neues Info-Fenster */
+          /* neues Info-Fenster */
           google.maps.event.addListener(layer, 'click', function(e) {
 
               // Change the content of the InfoWindow
@@ -611,62 +617,62 @@
 
 
 
-<!--rechte Seite
-<div class="Seitenfenster2">
-  <table id="text">
+  <!--rechte Seite
+  <div class="Seitenfenster2">
+    <table id="text">
 
-      <tr> <td id="text">Reiseziel</td></tr>
-    <tr><td><input id="input1" name="destination" type="text"></td></tr>
-  <tr id="text"><td>Abflug</td></tr>
+        <tr> <td id="text">Reiseziel</td></tr>
+      <tr><td><input id="input1" name="destination" type="text"></td></tr>
+    <tr id="text"><td>Abflug</td></tr>
 
- <td> <input id="input1" type="text"></td>
+   <td> <input id="input1" type="text"></td>
 
-    <tr><td><div><input type="date" id="input1" name="startDate"></div></td></tr>
-    <tr id="text"><td>Dauer in Tagen</td></tr>
-    <tr><td><input id="input1" name="duration" type="text"></td></tr>
+      <tr><td><div><input type="date" id="input1" name="startDate"></div></td></tr>
+      <tr id="text"><td>Dauer in Tagen</td></tr>
+      <tr><td><input id="input1" name="duration" type="text"></td></tr>
 
-  </table>
+    </table>
+
+    <script>
+        function expedia() {
+
+            var link ="https://www.expedia.de/Hotel-Search?packageType=fh&searchProduct=hotel&c=2cf23a2f-b989-4c31-8330-43443e06c7e1&adults=2&originId=179896&ftla=MUC&destination=";
+
+            link = link + document.getElementById("destination").value;
+
+            link = link + "+(WAS-Alle+Flugh%C3%A4fen)&destinationId=&ttla=WAS&startDate=";
+
+            link = link + document.getElementById("startDate").value;
+
+            link = link + "&endDate=";
+
+            var start = document.getElementById("startDate").value;
+
+            var endDate = new Date(start + document.getElementById("duration").value);
+
+            link = link + endDate.String;
+
+            link = link + "&sort=recommended&tripType=ROUND_TRIP&misId=5fb26802-5a02-48d5-89bf-5f0f7c2f5a1b";
+
+            return link;
+        }
+    </script>
+
+    <div id="suche">
+      <div id="link">
+        <a href= "javascript:expedia()"  target="_blank" >Suche</a>
+
+      </div>
+
+      -->
 
   <script>
-      function expedia() {
-
-          var link ="https://www.expedia.de/Hotel-Search?packageType=fh&searchProduct=hotel&c=2cf23a2f-b989-4c31-8330-43443e06c7e1&adults=2&originId=179896&ftla=MUC&destination=";
-
-          link = link + document.getElementById("destination").value;
-
-          link = link + "+(WAS-Alle+Flugh%C3%A4fen)&destinationId=&ttla=WAS&startDate=";
-
-          link = link + document.getElementById("startDate").value;
-
-          link = link + "&endDate=";
-
-          var start = document.getElementById("startDate").value;
-
-          var endDate = new Date(start + document.getElementById("duration").value);
-
-          link = link + endDate.String;
-
-          link = link + "&sort=recommended&tripType=ROUND_TRIP&misId=5fb26802-5a02-48d5-89bf-5f0f7c2f5a1b";
-
-          return link;
-      }
-  </script>
-
-  <div id="suche">
-    <div id="link">
-      <a href= "javascript:expedia()"  target="_blank" >Suche</a>
-
-    </div>
-
-    -->
-
-  <script>
-   function getDoctor(type) {
+      function getDoctor(type) {
 
           var list = [];
 
 
-         if (type == "Allgemeinmedizin") {
+          if (type == "Allgemeinmedizin") {
 
               var d0 = ['Fischer, Jasmin', '39104 Magdeburg', 'Am Krökentor 1A', '0391 5616087', 'Allgemeinmedizin', '52.137502', '11.637436'];
               var d1 =['Dipl.-Med. Hollenbach Peggy','39104 Magdeburg'	,'Otto-von-Guericke-Str. 54a'	,'0391 59779124'	,'Allgemeinmedizin',	'52.121256', '11.627296'];
@@ -682,7 +688,7 @@
 
               list.push(d0,d1,d2,d3,d4,d5,d6,d7,d8,d9,d10);
 
-         }
+          }
 
           return list;
 
@@ -692,4 +698,3 @@
 
 </div>
 </html>
-

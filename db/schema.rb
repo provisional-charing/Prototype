@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180819185207) do
+ActiveRecord::Schema.define(version: 20190326222753) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,19 @@ ActiveRecord::Schema.define(version: 20180819185207) do
     t.text     "counteraction"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "map_entries", force: :cascade do |t|
+    t.string   "name"
+    t.string   "plz"
+    t.string   "location"
+    t.string   "street"
+    t.string   "phone"
+    t.string   "spec"
+    t.string   "lat"
+    t.string   "lng"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "notes", force: :cascade do |t|

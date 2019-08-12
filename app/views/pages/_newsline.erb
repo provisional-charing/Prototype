@@ -1,19 +1,19 @@
-var nachricht=" ACHTUNG!!!! 0% Finanzierung ab 100€  Nur Heute 25% auf Tiernahrung  TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST "
-var text
-var verzoegerung=90
-var timerId
-function ticker() {
-text=nachricht
-document.frm.ticker.value=text
-nachricht=nachricht.substring (1, nachricht.length) + nachricht.substring (0, 1)
-timerId=setTimeout("ticker()", verzoegerung)
-}
-window.onload=ticker;
 <div id="laufsch">
   <form name="frm">
-    <input type="text" name="ticker" style="text-align: center; color: #ffffff;background: rgba(0, 0, 0, 0);length: 100%; width:100%;border:0px;font-size:12px;padding:5px;height:30px;">
+    <input type="text" name="ticker" style="text-align: center; width: 100%; color: #ffffff;background: rgba(0, 0, 0, 0);letter-spacing: 0.1em;border:0px;font-family: Segoe UI Light !important; font-size:12pt;padding: 2pt;">
   </form>
 </div>
-#frm{
-font-size: 20pt;
-}
+
+<script>
+    var nachricht="Nach Ansteckung in der Familie: Masern-Infizierter in Niedersachsen gestorben ● ● ● Über 1000 Tote im Kongo - Ebola praktisch außer Kontrolle ● ● ● Neuer Impfstoff gegen Malaria gibt Hoffnung ● ● ● "
+    var text
+    var verzoegerung=70	// damit Der text nicht durch rennt
+    var timerId
+    function ticker() {
+        text=nachricht
+        document.frm.ticker.value=text
+        nachricht=nachricht.substring (1, nachricht.length) + nachricht.substring (0, 1) 		// damit wird der Text sichtbar wenn Funktion in HTML aufegrufen wird
+        timerId=setTimeout("ticker()", verzoegerung)
+    }
+    window.onload=ticker;  // beim starten der Seite startet der Ticker
+</script>
