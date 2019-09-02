@@ -68,24 +68,27 @@ class MapEntriesController < ApplicationController
     typ = params[:typ]
     search = params[:search]
     coords = params[:coords]
-    case typ
+
+    case typ.to_i
     when 0
-      return MapEntry.all.where(spec: search.spec).to_json
+      json_data = MapEntry.all.where(spec: search[:spec]).to_json
     when 1
           a=[]
-          xp, yp = coords_to_rads([coords.x, coords.y])
+          xp, yp = coords_to_rads([coords[:x].to_f, coords[:y].to_f])
           @map_entries = MapEntry.all
           @map_entries.each do |e|
             xt, yt = coords_to_rads( [e.lat, e.lng] )
             dist = calc_distance(xt, yt, xp, yp)
-            if dist <= search.dist
-              a << e
+            puts "Distance: #{dist}"
+            if dist <= search[:dist].to_f
+              a << e.attributes.values
             end
           end
-          a.to_json
+          json_data = a.to_json
     else
-      return ''
+      json_data = ''
     end
+    render plain: json_data
   end
 
   private
@@ -101,31 +104,39 @@ class MapEntriesController < ApplicationController
     end
 
     def calc_distance(x1, y1, x2, y2)
+      puts "x1: #{x1}"
+      puts "y1: #{y1}"
+      puts "x2: #{x2}"
+      puts "y2: #{y2}"
       r = 6371
       dx = x1 - x2
       dy = y1 - y2
 
+      puts "dx: #{dx}"
+      puts "dy: #{dy}"
       a = Math.sin(dx/2)**2 + Math.cos(x1) * Math.cos(x2) * Math.sin(dy/2)**2
+      puts "a: #{a}"
       c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
+      puts "c: #{c}"
       r * c
     end
 
     def coords_to_rads (point)
       pc =[0,0]
       if point.length == 2
-          point.to_h.each do |index, value|
+          point.each_with_index { |value, index|
             if value.is_a? Numeric
               pc[index] = value
             elsif value.is_a? String # cd cardinal direction, d degree, m minutes, s seconds
               d, m, s, cd = value.scan(COORD_PARSE_REGEX)
-              pc[index] = radians(int(d) + int(m)/60 + int(s)/3600)
+              pc[index] = radians(d.to_i + m.to_i/60 + s.to_i/3600)
               if cd=='S' || cd=='W'
                 pc[index]*=-1
               end
             else
               pc[index] = 0
             end
-          end
+          }
       end
       pc
     end
