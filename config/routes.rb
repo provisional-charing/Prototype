@@ -31,4 +31,7 @@ Rails.application.routes.draw do
   get '/accinfo', to:'admin/users#normal_edit'
   get '/flysearch', to:'pages#flysearch'
   post '/user_own_update', to:'admin/users#normal_update', as: :user_normal_update
+  scope '/map_entries' do
+      post '/search', to:'map_entries#search'
+  end
 end
