@@ -1,7 +1,4 @@
-module Searchtype
-  SPEC = 1
-  DISTANCE = 2
-end
+require Rails.root.join('lib/searchtype')
 
 class MapEntriesController < ApplicationController
   before_action :authenticate_user!
@@ -70,13 +67,13 @@ class MapEntriesController < ApplicationController
 
   def search
     # right now implemented spec as 0 and distance as 1
-    typ          = params[:typ].to_i
+    type         = params[:type].to_i
     search       = params[:search]
     coords       = params[:coords]
     where_params = {}
     list = []
 
-    if typ & Searchtype::SPEC != 0
+    if type & Searchtype::SPEC != 0
       where_params[:spec] = search[:spec]
     end
 
@@ -87,7 +84,8 @@ class MapEntriesController < ApplicationController
       @map_entries = MapEntry.all
     end
 
-    if typ & Searchtype::DISTANCE != 0
+
+    if type & Searchtype::DISTANCE != 0
       xp, yp = coords_to_rads([coords[:x].to_f, coords[:y].to_f])
       @map_entries.each do |e|
         xt, yt = coords_to_rads( [e.lat, e.lng] )
