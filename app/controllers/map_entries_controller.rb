@@ -1,3 +1,8 @@
+module Searchtype
+  SPEC = 1
+  DISTANCE = 2
+end
+
 class MapEntriesController < ApplicationController
   before_action :authenticate_user!
   before_action :check_classification_admin
@@ -65,29 +70,40 @@ class MapEntriesController < ApplicationController
 
   def search
     # right now implemented spec as 0 and distance as 1
-    typ = params[:typ]
-    search = params[:search]
-    coords = params[:coords]
+    typ          = params[:typ].to_i
+    search       = params[:search]
+    coords       = params[:coords]
+    where_params = {}
+    list = []
 
-    case typ.to_i
-    when 0
-      json_data = MapEntry.all.where(spec: search[:spec]).to_json
-    when 1
-          a=[]
-          xp, yp = coords_to_rads([coords[:x].to_f, coords[:y].to_f])
-          @map_entries = MapEntry.all
-          @map_entries.each do |e|
-            xt, yt = coords_to_rads( [e.lat, e.lng] )
-            dist = calc_distance(xt, yt, xp, yp)
-            puts "Distance: #{dist}"
-            if dist <= search[:dist].to_f
-              a << e.attributes.values
-            end
-          end
-          json_data = a.to_json
-    else
-      json_data = ''
+    if typ & Searchtype::SPEC != 0
+      where_params[:spec] = search[:spec]
     end
+
+
+    if !where_params.empty?
+      @map_entries = MapEntry.all.where(where_params);
+    else
+      @map_entries = MapEntry.all
+    end
+
+    if typ & Searchtype::DISTANCE != 0
+      xp, yp = coords_to_rads([coords[:x].to_f, coords[:y].to_f])
+      @map_entries.each do |e|
+        xt, yt = coords_to_rads( [e.lat, e.lng] )
+        dist = calc_distance(xt, yt, xp, yp)
+        if dist <= search[:dist].to_f
+          list << e.attributes.except("created_at", "updated_at").values
+        end
+      end
+    else
+      @map_entries.each do |e|
+        list << e.attributes.except("created_at", "updated_at").values
+      end
+    end
+
+    json_data = list.to_json
+
     render plain: json_data
   end
 
@@ -104,20 +120,12 @@ class MapEntriesController < ApplicationController
     end
 
     def calc_distance(x1, y1, x2, y2)
-      puts "x1: #{x1}"
-      puts "y1: #{y1}"
-      puts "x2: #{x2}"
-      puts "y2: #{y2}"
       r = 6371
       dx = x1 - x2
       dy = y1 - y2
 
-      puts "dx: #{dx}"
-      puts "dy: #{dy}"
       a = Math.sin(dx/2)**2 + Math.cos(x1) * Math.cos(x2) * Math.sin(dy/2)**2
-      puts "a: #{a}"
       c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
-      puts "c: #{c}"
       r * c
     end
 
@@ -126,7 +134,7 @@ class MapEntriesController < ApplicationController
       if point.length == 2
           point.each_with_index { |value, index|
             if value.is_a? Numeric
-              pc[index] = value
+              pc[index] = radians(value)
             elsif value.is_a? String # cd cardinal direction, d degree, m minutes, s seconds
               d, m, s, cd = value.scan(COORD_PARSE_REGEX)
               pc[index] = radians(d.to_i + m.to_i/60 + s.to_i/3600)
