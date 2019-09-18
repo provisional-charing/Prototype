@@ -134,7 +134,7 @@ class MapEntriesController < ApplicationController
             if value.is_a? Numeric
               pc[index] = radians(value)
             elsif value.is_a? String # cd cardinal direction, d degree, m minutes, s seconds
-              d, m, s, cd = value.scan(COORD_PARSE_REGEX)
+              d, m, s, cd = value.scan(COORD_PARSE_REGEX).flatten
               pc[index] = radians(d.to_i + m.to_i/60 + s.to_i/3600)
               if cd=='S' || cd=='W'
                 pc[index]*=-1
