@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   get '/socialProjects', to: 'projects#sozialeProjekte_page'
   get '/accinfo', to:'admin/users#normal_edit'
   get '/flysearch', to:'pages#flysearch'
+  post '/provinces/index', to:'provinces#index'
   post '/user_own_update', to:'admin/users#normal_update', as: :user_normal_update
   scope '/map_entries' do
       post '/search', to:'map_entries#search'

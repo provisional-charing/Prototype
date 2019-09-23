@@ -147,7 +147,8 @@
     <input id="rButton" type="radio" name="hospital" value="Krankenhaus"> Krankenhaus
     <input id="rButton1" type="radio" name="aerzte" value="Ärzte"> Arzt
 
-    <select id="arztcombo" onchange=getAt()>
+    <select id="arztcombo">
+      <option selected></option>
       <option>Alle Fachrichtungen</option>
       <option>Allgemeinmedizin</option>
       <option>Anästhesiologie</option>
@@ -179,13 +180,28 @@
       <option>Zahnärzte</option>
     </select>
 
-    <select id="pac-input2" onchange=getAt()>
-      <option>egal</option>
-      <option>< 5   km</option>
-      <option>< 10  km</option>
-      <option>< 25  km</option>
-      <option>< 50  km</option>
-      <option>< 100 km</option>
+    <select id="pac-input2" >
+      <option value = null selected> beliebig</option>
+      <option value=0.5> 0.5 km</option>
+      <option value=0.75> 0.75 km</option>
+      <option value=1> 1 km </option>
+      <option value=1.5> 1.5 km</option>
+      <option value=2> 2 km</option>
+      <option value=3> 3 km</option>
+      <option value=4> 4 km</option>
+      <option value=5> 5 km</option>
+      <option value=7.5> 7.5 km</option>
+      <option value=10> 10 km</option>
+      <option value=15> 15 km</option>
+      <option value=20> 20 km</option>
+      <option value=25> 25 km</option>
+      <option value=30> 30 km</option>
+      <option value=35> 35 km</option>
+      <option value=40> 40 km</option>
+      <option value=45> 45 km</option>
+      <option value=50> 50 km</option>
+      <option value=75> 75 km</option>
+      <option value=100> 100 km</option>
     </select>
 
 
@@ -394,11 +410,13 @@
 
               function getDoctor(type) {
 
+                  alert(distance);
+
                return $.ajax({
 
                       type: "POST",
                       url: "/map_entries/search",
-                      data: {search: {dist: 10}, type: 1, coords: {x: 52.138718, y: 11.645646}},
+                      data: {search: {spec: type, dist: 0.5}, type: 3, coords: {x: 52.138718, y: 11.645646}},
                       success: function(data){
 
                           alert(data);
@@ -410,6 +428,8 @@
 
                               var markerContent = [];
                               var markerString ="";
+
+
 
                               for (var human in personalListed) {
 
@@ -550,7 +570,7 @@
                   });
               };
 
-              getDoctor(s);
+              getDoctor(s, distance);
         }
 
 
@@ -621,7 +641,7 @@
                       where: where
 
                   },
-                /*  styles: [{
+                  styles: [{
                       polygonOptions: {
                           fillColor: '',
                           fillOpacity: 0.0
@@ -632,12 +652,12 @@
                           fillColor: '#ffffff',
                           fillOpacity: 0.2
                       }
-                  }]*/
+                  }]
               });
 
               layer.setMap(null);
 
-              /* neues Info-Fenster */
+              //neues Info-Fenster
               google.maps.event.addListener(newOverlay, 'click', function(e) {
 
                   // Change the content of the InfoWindow
@@ -655,6 +675,25 @@
 
               layer.setMap(map);
 
+
+              return $.ajax({
+
+                  type: "POST",
+                  url: "/provinces/index",
+                  success: function(data){
+
+                      alert(data);
+                      var rueckgabeTupel = [];
+                      var  list = JSON.parse(data);
+
+                      return list;
+
+                  },
+                  error: function(data){
+                      alert("An error occured while requesting the Data from the server.\n Error: " + data.message);
+                      return false;
+                  }
+              });
           }
 
       }
