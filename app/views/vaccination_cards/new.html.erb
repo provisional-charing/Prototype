@@ -1,5 +1,28 @@
-<h1 style="color: white">New Vaccination Card</h1>
+<div id="gesamtesFenster">
+  <%= image_tag "impfpassBackground.jpg", class: "testIcon" %>
+</div>
 
-<%= render 'form', vaccination_card: @vaccination_card %>
+<h1 style="color: white">Add Entry to Vaccination Card</h1>
 
-<%= link_to 'Back', vaccination_cards_path %>
+
+<%= form_for @vaccination_card do |f| %>
+  <% if @vaccination_card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vaccination_card.errors.count, "error") %> prohibited this vaccination_card from being
+        saved:</h2>
+
+      <ul>
+        <% @vaccination_card.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= render "#{@vaccination_card.current_step}", :f => f %>
+  <p><%= f.submit "Continue" %></p>
+  <p><%= f.submit "Back", :name => "back_button" unless @vaccination_card.first_step? %></p>
+<% end %>
+
+<%#= render 'form', vaccination_card: @vaccination_card %>
+
+<p><%= link_to 'Back to Vaccination Card', impfpass_path %></p>

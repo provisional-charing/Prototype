@@ -1,0 +1,8 @@
+<h1>Confirm entered Data</h1>
+
+<% @vaccination_card.attributes.each do |attr| %>
+  <p>
+    <strong><%= attr.key %></strong>
+    <%= attr.value %>
+  </p>
+<% end %>

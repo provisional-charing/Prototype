@@ -1,0 +1,4 @@
+<h1> Select the type of the entry</h1>
+
+<strong>Type: </strong>
+<%= f.select :injection_type, options_for_select(VaccinationCard::ENTRY_TYPES.collect.with_index.to_a, @vaccination_card.injection_type), @vaccination_card.injection_type ? {} : {prompt: '-- Select Entry type --'} %>

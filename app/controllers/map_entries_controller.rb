@@ -91,12 +91,12 @@ class MapEntriesController < ApplicationController
         xt, yt = coords_to_rads( [e.lat, e.lng] )
         dist = calc_distance(xt, yt, xp, yp)
         if dist <= search[:dist].to_f
-          list << e.attributes.except("created_at", "updated_at").values
+          list << e.attributes.except("created_at", "updated_at")
         end
       end
     else
       @map_entries.each do |e|
-        list << e.attributes.except("created_at", "updated_at").values
+        list << e.attributes.except("created_at", "updated_at")
       end
     end
 

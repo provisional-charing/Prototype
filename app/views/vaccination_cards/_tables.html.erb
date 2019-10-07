@@ -1,0 +1,8 @@
+<h1> Select the Vaccination and the physician</h1>
+
+<strong>Vaccination: </strong>
+<%= f.select :vaccination_id, options_for_select(Vaccination.all.map{ |s| [Disease.find(s.disease_id).name, s.id] }, @vaccination_card.vaccination_id) ,@vaccination_card.vaccination_id ? {} : {prompt: '-- Select Vaccination --'} %>
+
+<strong>Physician: </strong>
+
+<%= f.text_field :doctor, value: session[:vaccination_card_params].key(:doctor)? session[:vaccination_card_params].doctor : nil %>

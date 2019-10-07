@@ -23,7 +23,10 @@ class VaccinationCardsController < ApplicationController
 
   # GET /vaccination_cards/new
   def new
-    @vaccination_card = VaccinationCard.new
+    session[:vaccination_card_params] ||= {}
+    @vaccination_card = VaccinationCard.new(session[:vaccination_card_params])
+    @vaccination_card.current_step = session[:vaccination_card_step]
+    @vaccination_card.user = current_user
   end
 
   # GET /vaccination_cards/1/edit
@@ -33,17 +36,30 @@ class VaccinationCardsController < ApplicationController
   # POST /vaccination_cards
   # POST /vaccination_cards.json
   def create
-    @vaccination_card = VaccinationCard.new(vaccination_card_params)
+    session[:vaccination_card_params].deep_merge!(params[:vaccination_card]) if params[:vaccination_card]
+    @vaccination_card = VaccinationCard.new(session[:vaccination_card_params])
+    @vaccination_card.current_step = session[:vaccination_card_step]
 
-    respond_to do |format|
-      if @vaccination_card.save
-        format.html { redirect_to @vaccination_card, notice: 'Vaccination card was successfully created.' }
-        format.json { render :show, status: :created, location: @vaccination_card }
-      else
-        format.html { render :new }
-        format.json { render json: @vaccination_card.errors, status: :unprocessable_entity }
-      end
+    process_step
+
+    if @vaccination_card.new_record?
+      render 'new'
+    else
+      session[:vaccination_card_step] = session[:vaccination_card_params] = nil
+      flash[:notice] = "Entry saved."
+      redirect_to impfpass_path
     end
+    #@vaccination_card = VaccinationCard.new(vaccination_card_params)
+    #
+    #respond_to do |format|
+    #  if @vaccination_card.save
+    #    format.html { redirect_to @vaccination_card, notice: 'Vaccination card was successfully created.' }
+    #    format.json { render :show, status: :created, location: @vaccination_card }
+    #  else
+    #    format.html { render :new }
+    #    format.json { render json: @vaccination_card.errors, status: :unprocessable_entity }
+    #  end
+    #end
   end
 
   # PATCH/PUT /vaccination_cards/1
@@ -80,4 +96,22 @@ class VaccinationCardsController < ApplicationController
     def vaccination_card_params
       params.require(:vaccination_card).permit(:vaccination_id, :user_id, :get_date, :injection_type, :dosis_e, :dosis_ml, :typ, :charge_number, :doctor, :test, :reaktion)
     end
+
+    def vaccination_card_type_params
+      params.require(:vaccination_card).permit(:typ);
+    end
+
+    def process_step
+      #if @vaccination_card.valid?
+        if params[:back_button]
+          @vaccination_card.previous_step
+        elsif @vaccination_card.last_step?
+          @vaccination_card.save if @vaccination_card.all_valid?
+        else
+          @vaccination_card.next_step
+        end
+        session[:vaccination_card_step] = @vaccination_card.current_step
+      #end
+    end
+
 end

@@ -35,6 +35,7 @@ def change_note
 end
 
 def impfpass_page
+  session[:vaccination_card_params] = nil
   unless current_user.nil?
     @vaccinations=current_user.vaccination_cards
   end
