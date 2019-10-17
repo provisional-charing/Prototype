@@ -1,8 +1,12 @@
 <h1>Confirm entered Data</h1>
 
 <% @vaccination_card.attributes.each do |attr| %>
-  <p>
-    <strong><%= attr.key %></strong>
-    <%= attr.value %>
-  </p>
+  <% if attr[1]%>
+    <p>
+      <strong><%= attr[0] %></strong>
+      <%= attr[1] %>
+    </p>
+  <% end %>
 <% end %>
+
+<%= f.hidden_field :user_id, value: current_user.id %>

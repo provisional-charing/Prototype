@@ -1,0 +1,25 @@
+<% case @vaccination_card.injection_type when 0 %>
+Typ <%= f.text_field :typ, value: @vaccination_card.typ%>
+Batch <%= f.text_field :charge_number, value: @vaccination_card.charge_number%>
+Dosis <%= f.number_field :dosis_e, value:@vaccination_card.dosis_e, step:10%>
+      <%= f.number_field :dosis_ml, value: @vaccination_card.dosis_ml, step: 10 %>
+<% when 1 %>
+Batch <%= f.text_field :charge_number, value: @vaccination_card.charge_number %>
+<% when 2 %>
+Test <%= f.text_field :test, value: @vaccination_card.test %>
+Result <%= f.text_field :reaktion, value: @vaccination_card.reaktion %>
+<% when 3 %>
+Batch <%= f.text_field :charge_number, value: @vaccination_card.charge_number %>
+<% when 4 %>
+Batch <%= f.text_field :charge_number, value: @vaccination_card.charge_number %>
+<% when 5 %>
+Test and concentration <%= f.text_field :test, value: @vaccination_card.test %>
+Reaktion <%= f.text_field :reaktion, value: @vaccination_card.reaktion %>
+<% when 6 %>
+Typ <%= f.text_field :typ, value: @vaccination_card.typ %>
+Batch <%= f.text_field :charge_number, value: @vaccination_card.charge_number %>
+Dosis <%= f.number_field :dosis_e, value: @vaccination_card.dosis_e, step: 10 %>
+      <%#= f.number_field :dosis_ml, value: @vaccination_card.dosis_ml, step: 10 %>
+<% else %>
+
+<% end %>

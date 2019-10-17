@@ -1,0 +1,3 @@
+class RegionLethality < ApplicationRecord
+
+end

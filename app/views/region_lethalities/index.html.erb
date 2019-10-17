@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Region lethalities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Disease</th>
+      <th>Province</th>
+      <th>Lethality</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @region_lethalities.each do |region_lethality| %>
+      <tr>
+        <td><%= Disease.find(region_lethality.disease_id).name %></td>
+        <td><%= Province.find(region_lethality.province_id).province_name %></td>
+        <td><%= region_lethality.lethality %></td>
+        <td><%= link_to 'Edit', edit_region_lethality_path(region_lethality) %></td>
+        <td><%= link_to 'Destroy', region_lethality, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Region lethality', new_region_lethality_path %>
+
+<%= link_to 'Home', root_path %>

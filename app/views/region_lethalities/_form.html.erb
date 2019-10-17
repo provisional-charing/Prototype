@@ -1,0 +1,32 @@
+<%= form_for(region_lethality) do |f| %>
+  <% if region_lethality.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(region_lethality.errors.count, "error") %> prohibited this vaccination from being saved:</h2>
+
+      <ul>
+      <% region_lethality.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :disease %>
+    <%= f.select :disease_id, Disease.all.collect {|d| [d.name, d.id]}, {include_blank: 'None'} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :province %>
+    <%= f.select :province_id, Province.all.collect {|d| [d.province_name, d.id]}, {include_blank: 'None'} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lethality %>
+    <%= f.number_field :lethality, min:0, max:100, step: 0.01 %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

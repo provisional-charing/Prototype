@@ -29,6 +29,8 @@ gem 'activerecord-postgis-adapter'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+gem 'jquery-ui-rails'
+
 gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'

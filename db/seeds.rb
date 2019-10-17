@@ -119,45 +119,45 @@ MapEntry.create(name:    'Dr. Heuer Marina',
                 street:  'Liebknechtstr. 48',
                 phone:   '0391 7317416',
                 spec:    'Allgemeinmedizin',
-                lat:     '52.123751',
-                lng:      '11.609135')
+                lat:     52.123751,
+                lng:     11.609135)
 MapEntry.create(name:    'Dipl.-Med. Impe Volkmar',
                 plz:     '39110',
                 location:'Magdeburg',
                 street:  'Große Diesdorfer Str. 186',
                 phone:   '0391 7227336',
                 spec:    'Allgemeinmedizin',
-                lat:     '52.128650',
-                lng:     '11.599872')
+                lat:     52.128650,
+                lng:     11.599872)
 MapEntry.create(name:    'Dr. Feilke Gudrun',
                 plz:     '39112',
                 location:'Magdeburg',
                 street:  'Förderstedter Str. 30',
                 phone:   '0391 4019663',
                 spec:    'Allgemeinmedizin',
-                lat:     '52.107524',
-                lng:     '11.617483')
+                lat:     52.107524,
+                lng:     11.617483)
 MapEntry.create(name:    'Dr. Padler Christine',
                 plz:     '39114',
                 location:'Magdeburg',
                 street:  'Turmschanzenstr. 17',
                 phone:   '0391 831065',
                 spec:    'Allgemeinmedizin',
-                lat:     '52.128382',
-                lng:     '11.655208')
+                lat:     52.128382,
+                lng:     11.655208)
 MapEntry.create(name:    'Dr. Günther Iris',
                 plz:     '39116',
                 location:'Magdeburg',
                 street:  'Magdeburger Str. 9',
                 phone:   '0391 6312107',
                 spec:    'Allgemeinmedizin',
-                lat:     '52.088881',
-                lng:     '11.575730')
+                lat:     52.088881,
+                lng:     11.575730)
 MapEntry.create(name:    'Dr. Steinicke Julia',
                 plz:     '39118',
                 location:'Magdeburg',
                 street:  'Otto-Baer-Str. 2',
                 phone:   '0391 616513',
                 spec:    'Allgemeinmedizin',
-                lat:     '52.089821',
-                lng:     '11.614672')
+                lat:     52.089821,
+                lng:     11.614672)

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :vaccinations
   resources :projects
   resources :diseases
+  resources :region_lethalities
 
   namespace :admin do
     resources :users
