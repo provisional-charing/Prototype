@@ -1,5 +1,5 @@
 <div class="image-container" xmlns="http://www.w3.org/1999/html">
-  <%= image_tag "backgroundAfterLogin.jpg" , size: "2048x1080"  %>
+  <%= image_tag "healthcare.png" , size: "2048x1080"  %>
 
 </div>
 
@@ -13,19 +13,21 @@
 
   <div id="wikiTitle">Notizen</div>
 
-  <div id="Seitenfenster3">
+  <div id="notesBackgroundDiv">
+
+    <div id="Seitenfenster3">
 
     <div id="my_notes">
 
       <h3 id="meineNotizen">Meine Notizen</h3>
 
       <% @notes.each do |note|%>
-        <%= link_to note.title.blank? ? 'untitled':note.title, custom_notes_path(id:note.id), id: "link_to_Antrag" %> </br>
+        <%= link_to note.title.blank? ? 'untitled':note.title, custom_notes_path(id:note.id), id: "link_to_Antrag2" %> </br>
       <% end %>
     </div>
 
     <%= link_to "Hinzufügen", custom_notes_path, remote: true , id: "linkAddDelete"%>
-    <% unless @note.id.nil? %>
+      <% unless @note.id.nil? %> </br></br>
       <% path = (@note.id.nil? ? root_path : note_path(@note))%>
       <%= link_to "Löschen", path, remote: true, method: :delete , id: "linkAddDelete"%>
     <% end %>
@@ -51,5 +53,6 @@
     </div>
 
 <% end %>
+</div>
 </div>
 </div>

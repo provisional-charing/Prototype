@@ -12,7 +12,7 @@
 }
 
 .regInput {
-    color: white;
+    color: #000000;
     font-family: "Segoe UI Light";
     font-size: 14pt;
     outline: none;
@@ -20,18 +20,21 @@
     width: 90%;
     border-color: white;
     min-width: 150pt;
-    border-width: 2px;
+    border-width: 0;
+    border-radius: 5pt;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 1%;
 
 }
 
 #reg{
     text-align: center;
-    color: white;
+    color: #000000;
 
 }
 
 .regAttribut{
+    color: #000000;
     font-family: "Segoe UI Light";
     font-size: 16pt;
     text-align: left;
@@ -60,12 +63,14 @@
 #registerContainer{
     position: absolute;
     text-align: center;
-
+    padding-right: 1.8%;
     top: 13%;
     left: 36%;
 
-
-    background-color: rgba(0,0,0,0.6);
+    background-color: #ffffff;
+    border: solid 0 #ffffff;
+    border-radius: 15pt;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 2;
 }
 
@@ -81,13 +86,13 @@
 }
 
 #regField{
-    padding: 20px 20px 50px 20px;
+    padding: 20px 20px 2%  20px;
     border: none;
 }
 
 #usertable, #usertable thead tr, #usertable tbody tr{
     color: white;
-    background-color:rgba(255, 255, 255, 0.1)!important;
+    background-color:#ffffff !important;
 }
 
 #user_edit_Field{

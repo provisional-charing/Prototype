@@ -12,16 +12,6 @@
 
     }
 
-
-
-    #menuLink *{
-      text-decoration: none;
-      color: white;
-      line-height: 2.0em;
-      font-size: 1.6em ;
-      font-family: "Segoe UI Light";
-    }
-
     .myTest{
       max-height : 25em;
       overflow: auto;
@@ -53,9 +43,9 @@
       font-weight: 300;
     }
 
-    #pac-input {
-      margin-left: -2%;
-      margin-right: 1.5%;
+    .elementeOberesSuchfeld {
+      margin-left: 0.5%;
+      margin-right: 0.5%;
       background-color: #fff;
       font-family: "Segoe UI Light";
       font-size: 17px;
@@ -63,77 +53,104 @@
       padding: 0 11px 0 13px;
       text-overflow: ellipsis;
       width: 400px;
-      border-radius: 30px;
+      border-radius: 0% 0% 15pt 15pt;
+      border-width: 1pt;
       border-style: solid;
-      border-color: white;
+      border-color: #ffffff;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       z-index: 4;
     }
 
-    #pac-input:focus {
-      border-color: white;
-      border-radius: 10px;
+    .elementeOberesSuchfeld:focus {
+      border-color: #ffffff;
+      border-width: 1pt;
+      border-radius: 0% 0% 15pt 15pt;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       border-style: solid;
     }
 
 
     #oberesSuchfeld{
-      padding-top: 0.25%;
       padding-bottom: 0.25%;
-      padding-left: 1%;
-      padding-right: 1%;
-      border-radius: 0% 0% 20px 20px;
+      border-radius: 0% 0% 15pt 15pt;
       position: fixed;
       font-family: "Segoe UI Light" !important;
-      width: 65%;
+      width: 88%;
       top: 0%;
-      margin-left: 16%;
-      height: 3%;
-      color: #ffffff;
-      text-align: center; font-style: normal; font-size: 14.5pt;
-      background: rgba(0,0,0, .6);
+      margin-left: 6%;
+      height: 4%;
+      color: #000000;
+      text-align: left; font-style: normal; font-size: 14.5pt;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      background: #ffffff;
       z-index: 3;
     }
 
-    #pac-input2{
-      margin-left: 1.5%;
-      background-color: #fff;
-      font-family: "Segoe UI Light";
+    #labelForLetalitaet{
+      font-family: "Segoe UI Light", serif;
+      margin-right: 1%;
       font-size: 17px;
       font-weight: 300;
-      padding: 0 11px 0 13px;
-      text-overflow: ellipsis;
 
-      border-radius: 30px;
-      border-style: solid;
-      border-color: white;
-      z-index: 4;
+    }
+    #letalitaet {
+      -webkit-appearance: none;
+      position: fixed;
+      display: inline-block;
+      margin-top: 0.55%;
+      width: 16%;
+      height: 4pt;
+      border-radius: 15pt;
+      background: #d3d3d3;
+      outline: none;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
     }
 
-    #arztcombo{
-      margin-left: 1.5%;
-      background-color: #fff;
-      font-family: "Segoe UI Light";
-      font-size: 17px;
-      font-weight: 300;
-      padding: 0 11px 0 13px;
-      text-overflow: ellipsis;
-
-      border-radius: 30px;
-      border-style: solid;
-      border-color: white;
-      z-index: 4;
+    #letalitaet::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 10pt;
+      height: 10pt;
+      border-radius: 50%;
+      background: #14ff14;
+      cursor: pointer;
     }
 
-    #rButton1{
-      margin-left: 1.5%;
+    #letalitaet::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #14ff14;
+      cursor: pointer;
     }
 
+      #containerLetalitaet{
+        position: fixed;
+        display: inline-block;
+        height: 2.8%;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+        background-color: #fff;
+        font-family: "Segoe UI Light";
+        font-size: 17px;
+        font-weight: 300;
+        padding: 0 11px 0 13px;
+        width: 400px;
+        border-radius: 0% 0% 15pt 15pt;
+        border-width: 1pt;
+        border-style: solid;
+        border-color: #ffffff;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        z-index: 4;
+      }
+      
   </style>
 
 </head>
 
 <div class="image-container" xmlns="http://www.w3.org/1999/html">
-  <%= image_tag "backgroundAfterLogin.jpg" , size: "2048x1080"  %>
+  <%= image_tag "healthcare.png" , size: "2048x1080"  %>
 
 </div>
 
@@ -141,14 +158,12 @@
 <div id="MapFenster">
 
   <div id="oberesSuchfeld">
-    <input id="pac-input" class="controls" type="text"
-           placeholder="Zieleingabe">
+    <label for="oberesSuchfeldZieleingabe"></label><input id="oberesSuchfeldZieleingabe" class="elementeOberesSuchfeld" type="text"
+                                                          placeholder="Zieleingabe">
 
-    <input id="rButton" type="radio" name="hospital" value="Krankenhaus"> Krankenhaus
-    <input id="rButton1" type="radio" name="aerzte" value="Ärzte"> Arzt
 
-    <select id="arztcombo">
-      <option value = null selected></option>
+    <select id="arztcombo" class="elementeOberesSuchfeld">
+      <option value ="" selected disabled>Fachrichtung des Arztes auswählen</option>
       <option value="Alle Fachrichtungen">Alle Fachrichtungen</option>
       <option value="Allgemeinmedizin">Allgemeinmedizin</option>
       <option value="Anästhesiologie">Anästhesiologie</option>
@@ -180,8 +195,8 @@
       <option value="Zahnärzte">Zahnärzte</option>
     </select>
 
-    <select id="pac-input2" >
-      <option value = null selected> beliebig</option>
+    <select id="oberesSuchfeldDistanzBox" class="elementeOberesSuchfeld" >
+      <option value ="" selected disabled>Entfernung angeben</option>
       <option value=0.5> 0.5 km</option>
       <option value=0.75> 0.75 km</option>
       <option value=1> 1 km </option>
@@ -205,9 +220,8 @@
     </select>
 
 
-    <div class="slidecontainer">
-      <input id="mortalitaet" type="range" value="0" min="0" max="100">
-    </div>
+
+    <label for="letalitaet"></label><div id="containerLetalitaet"><label id="labelForLetalitaet">Letalität: </label><input id="letalitaet" type="range" value="0" min="0" max="100"></div>
 
   </div>
 
@@ -373,11 +387,11 @@
           }
 
 
-          var input = document.getElementById('pac-input');
+          var input = document.getElementById('oberesSuchfeldZieleingabe');
 
           var aTyp = document.getElementById('arztcombo');
 
-          var distbox = document.getElementById("pac-input2");
+          var distbox = document.getElementById("oberesSuchfeldDistanzBox");
 
 
 
@@ -400,7 +414,7 @@
                   markers = [];
               }
 
-              
+
               function getDoctor(spec, dist) {
 
                     var distance = dist.value;

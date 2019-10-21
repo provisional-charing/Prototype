@@ -1,5 +1,5 @@
 <div class="image-container" xmlns="http://www.w3.org/1999/html">
-  <%= image_tag "backgroundAfterLogin.jpg" , size: "2048x1080"  %>
+  <%= image_tag "healthcare.png" , size: "2048x1080"  %>
 
 </div>
 
@@ -11,6 +11,7 @@
 
 <div id="tabellenPlatz">
   <div id="wikiTitle">Accountinfo</div>
+  <div id="accInfoBackContainer">
   <%= form_for @user, url: user_normal_update_path(@user), html: {method: :post} do |f| %>
     <% if @user.errors.any? %>
       <div id="error_explanation">
@@ -89,5 +90,6 @@
       </div>
     </div>
   <% end %>
+</div>
 </div>
 </div>

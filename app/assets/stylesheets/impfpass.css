@@ -1,5 +1,5 @@
 #who{
-    background-color: rgba(49,165,159,1);
+    background-color: transparent;
 }
 
 
@@ -9,7 +9,7 @@
     padding: 5px;
     margin: 1vh;
     background-color: transparent;
-
+    color: #000000 !important;
     margin-left: 1.2vw;
     font-family: "Segoe UI Light";
     font-size: 1.4em;
@@ -32,9 +32,10 @@
 }
 
 #tabelleSI th{
-    background: rgba(49,165,159,1);
+    border: solid black 0;
+    background: #03AC13;
     padding: 1%;
-    color: #ffffff;
+    color: #000000;
     font-weight: bold ;
 }
 
@@ -42,7 +43,7 @@
     border: white solid;
     border-width:  0px 1px 1px 1px;
     padding: 1%;
-    color: #ffffff;
+    color: #000000;
     font-weight: bold;
     text-align: center;
 }
@@ -61,9 +62,9 @@
 #link_to_vacc_information{
     font-family: "Segoe UI Light";
     font-size: 1.5em;
-    color: white;
+    color: #000000;
     margin-left: 1%;
-    text-decoration: none;
+
 }
 
 /*SHOW ENTRIES*/
@@ -72,7 +73,7 @@
     margin: 1%;
     margin-left: 1.5%;
     font-family: "Segoe UI Light";
-    color: white;
+    color: #000000;
 
 }
 
@@ -81,7 +82,7 @@
 
     margin-left: 1.5%;
     font-family: "Segoe UI Light";
-    color: white;
+    color: #000000;
 
 }
 
@@ -90,7 +91,19 @@
     margin: 1%;
     margin-right: 1.7%;
     font-family: "Segoe UI Light";
-    color: white;
+    color: #000000;
+}
+
+#comboBox{
+    color: #000000;
+    background: #ffffff;
+    max-height: 85%;
+    min-height: 85%;
+    width: 98%;
+    margin-left: 1%;
+    border: solid 1pt #ffffff;
+    border-radius: 15pt;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*Prev or Next*/
@@ -110,4 +123,17 @@
     font-family: "Segoe UI Light";
 }
 
+#tableHeaderLeft{
+    border: solid 30pt red;
+    border-radius: 0 15pt 0 0;
+}
 
+#regLogin{
+    background: #14ff14;
+    color: #000000!important;
+    border: solid 0 #ffffff;
+    border-radius: 10pt;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 5%;
+
+}

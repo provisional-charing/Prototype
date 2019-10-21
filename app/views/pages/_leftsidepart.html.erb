@@ -1,44 +1,76 @@
-<div id="SeitenfensterLinks">
-  <div id="menu">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <ul>
+
+<div class="navigation-wrapper">
+  <div class="navigation-button">
+    <i class="fa fa-bars"></i>
+  </div>
+  <div class="navigation-menu">
+
+  <ul>
       <% if user_signed_in? %>
         <% if current_user.admin? %>
           <li id="menuLink"><%= link_to "Users", admin_users_path %></li>
-          <li id="menuLink"><%= link_to "Home", "/main" %></li>
-          <li id="menuLink"><%= link_to "Impfungen", vaccinations_path %></li>
+          <li><%= image_tag "main.png" , size: "32x32"%><%= link_to "Home", "/main" %></li>
+          <li><%= image_tag "impfpass.png" , size: "32x32"%><%= link_to "Impfungen", "/impfpass" %></li>
           <li id="menuLink"><%= link_to "Patienten Impfungen", vaccination_cards_path %></li>
-          <li id="menuLink"><%= link_to "Weltkarte", "/world" %></li>
+          <li><%= image_tag "Map.png" , size: "32x32"%><%= link_to "Weltkarte", "/world" %></li>
           <li id="menuLink"><%= link_to "Lethalität", "/region_lethalities" %></li>
-          <li id="menuLink"><%= link_to "Kompendium", "/wikiMain" %></li>
-          <li id="menuLink"><%= link_to "soziale Projekte", projects_path %></li>
+          <li><%= image_tag "Kompendium.png" , size: "32x32"%><%= link_to "Kompendium", "/wikiMain" %></li>
+          <li><%= image_tag "projects.png" , size: "32x32"%><%= link_to "soziale Projekte", "/socialProjects" %></li>
           <li id="menuLink"><%= link_to "Krankheiten", diseases_path %></li>
-          <li id="menuLink"><%= link_to "Notizen", "/note" %></li>
+          <li><%= image_tag "notice.png" , size: "32x32"%><%= link_to "Notizen", "/note" %></li>
+          <li><%= image_tag "logoutIcon.png" , size: "32x32"%><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
 
         <% else if current_user.doc?%>
-          <li id="menuLink"><%= link_to "Accountinfo", "/accinfo" %></li>
-          <li id="menuLink"><%= link_to "Home", "/main" %></li>
-          <li id="menuLink"><%= link_to "Impfungen", vaccinations_path %></li>
+            <li> <%= image_tag "profile.png" , size: "32x32"%> <%= link_to "Accountinfo", "/accinfo" %></li>
+            <li><%= image_tag "main.png" , size: "32x32"%><%= link_to "Home", "/main" %></li>
+            <li><%= image_tag "impfpass.png" , size: "32x32"%><%= link_to "Impfungen", "/impfpass" %></li>
           <li id="menuLink"><%= link_to "Patienten Impfungen", vaccination_cards_path %></li>
-          <li id="menuLink"><%= link_to "Weltkarte", "/world" %></li>
+            <li><%= image_tag "Map.png" , size: "32x32"%><%= link_to "Weltkarte", "/world" %></li>
           <li id="menuLink"><%= link_to "Lethalität", "/region_lethalities" %></li>
-          <li id="menuLink"><%= link_to "Kompendium", "/wikiMain" %></li>
-          <li id="menuLink"><%= link_to "soziale Projekte", "/socialProjects" %></li>
-          <li id="menuLink"><%= link_to "Krankheiten", diseases_path %></li>
-          <li id="menuLink"><%= link_to "Notizen", "/note" %></li>
+            <li><%= image_tag "Kompendium.png" , size: "32x32"%><%= link_to "Kompendium", "/wikiMain" %></li>
+            <li><%= image_tag "projects.png" , size: "32x32"%><%= link_to "soziale Projekte", "/socialProjects" %></li>
+            <li><%= image_tag "notice.png" , size: "32x32"%><%= link_to "Notizen", "/note" %></li>
+            <li><%= image_tag "logoutIcon.png" , size: "32x32"%><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
         <% else %>
-          <li id="menuLink"><%= link_to "Accountinfo", "/accinfo" %></li>
-          <li id="menuLink"><%= link_to "Home", "/main" %></li>
-          <li id="menuLink"><%= link_to "Impfungen", "/impfpass" %></li>
-            <li id="menuLink"><%= link_to "Weltkarte", "/world" %></li>
-            <li id="menuLink"><%= link_to "Flugsuche", "/flysearch" %></li>
-            <li id="menuLink"><%= link_to "Kompendium", "/wikiMain" %></li>
-          <li id="menuLink"><%= link_to "soziale Projekte", "/socialProjects" %></li>
-            <li id="menuLink"><%= link_to "Notizen", "/note" %></li>
+            <li> <%= image_tag "profile.png" , size: "32x32"%> <%= link_to "Accountinfo", "/accinfo" %></li>
+            <li><%= image_tag "main.png" , size: "32x32"%><%= link_to "Home", "/main" %></li>
+            <li><%= image_tag "impfpass.png" , size: "32x32"%><%= link_to "Impfungen", "/impfpass" %></li>
+            <li><%= image_tag "Map.png" , size: "32x32"%><%= link_to "Weltkarte", "/world" %></li>
+            <li><%= image_tag "Kompendium.png" , size: "32x32"%><%= link_to "Kompendium", "/wikiMain" %></li>
+            <li><%= image_tag "projects.png" , size: "32x32"%><%= link_to "soziale Projekte", "/socialProjects" %></li>
+            <li><%= image_tag "notice.png" , size: "32x32"%><%= link_to "Notizen", "/note" %></li>
+            <li><%= image_tag "logoutIcon.png" , size: "32x32"%><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
         <% end %><% end %>
-        <li id="menuLink"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
       <% end %>
-    </ul>
+  </ul>
   </div>
-
 </div>
+
+<script>
+    var navButton = document.querySelector('.navigation-button');
+    var navMenu = document.querySelector('.navigation-menu');
+    var win = window;
+
+    function openMenu(event) {
+
+        navButton.classList.toggle('active');
+        navMenu.classList.toggle('active');
+
+        event.preventDefault();
+        event.stopImmediatePropagation();
+    }
+
+    function closeMenu(event) {
+        if (navButton.classList.contains('active')) {
+            navButton.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    }
+    navButton.addEventListener('click', openMenu, false);
+
+    win.addEventListener('click',closeMenu, false);
+
+</script>

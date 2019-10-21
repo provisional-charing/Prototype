@@ -2,8 +2,8 @@
 #meineNotizen{
     font-size: 14pt;
     font-family: "Segoe UI Light";
-    text-decoration: underline white;
-    color: white;
+    text-decoration: underline #000000;
+    color: #000000;
 }
 
 #notiz1{
@@ -25,13 +25,13 @@ margin-bottom: 15%;
 
 #Seitenfenster3{
     margin: 1%;
-    float: left !important;
+    float: left;
     border-style: solid;
-    padding: 1%;
     border-width: 1px;
     border-radius: 10px;
     border-color: white;
-
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-bottom: 5%;
     width: 13%;
 }
 
@@ -41,7 +41,7 @@ margin-bottom: 15%;
     border-width: 1px;
     border-radius: 10px;
     border-color: white;
-
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     background: transparent;
     width: 470%;
@@ -49,7 +49,7 @@ margin-bottom: 15%;
 
     font-size: 14pt;
     font-family: "Segoe UI Light";
-    color: #ffffff;
+    color: #000000;
 }
 
 #noteTitle{
@@ -60,20 +60,20 @@ margin-bottom: 15%;
     border-width: 1px;
     border-radius: 10px;
     border-color: white;
-
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background: transparent;
     width: 200%;
 
 
     font-size: 14pt;
     font-family: "Segoe UI Light";
-    color: #ffffff;
+    color: #000000;
 }
 
 #save{
     background-color: transparent;
-    color: white;
-
+    color: #000000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-top: 3%;
     border-style: solid;
     padding: 2%;
@@ -85,14 +85,47 @@ margin-bottom: 15%;
 #linkAddDelete{
     font-family: "Segoe UI Light";
     font-size: 1.2em;
-    color: white;
+    color: #000000;
     text-decoration: none;
-    margin: 1%;
-
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-style: solid;
-    padding: 2%;
     border-width: 1px;
     border-radius: 10px;
     border-color: white;
+    padding: 2%;
 
+
+}
+
+#notesBackgroundDiv{
+    border: solid 2pt #ffffff;
+    border-radius: 15pt;
+    min-height: 82%;
+    max-height: 82%;
+    margin-left: 6%;
+    padding-top: 1%;
+    max-width: 62%;
+    margin-top: 3%;
+    background: #ffffff;
+}
+
+#noteAttribut{
+    max-width: 550%;
+    min-width: 10%;
+}
+
+#speichern{
+    margin-left: -40%;
+}
+
+#link_to_Antrag2{
+    font-family: "Segoe UI Light";
+    font-size: 1.2em;
+    color: #000000;
+    text-decoration: none;
+
+}
+
+#link_to_Antrag2 :hover{
+    color: #03AC13;
 }

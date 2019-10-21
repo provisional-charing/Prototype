@@ -37,38 +37,47 @@
 
 #inhalt{
     text-align: left;
-    color: white;
-    margin-left: 3.5%;
-    margin-top: 2%;
-    margin-right: 3.5%;
-    color: white;
+    color: #000000;
+    margin-left: 6%;
+    margin-top: 3%;
+    margin-right: 30%;
     font-size: 14pt;
     line-height: 20pt;
     font-family: "Segoe UI Light" !important;
     align-items: left !important;
+    text-decoration: none;
+    z-index: 1;
+    background: #ffffff;
+    width: 63%;
+    min-width: 504pt;
+    border: #14ff14 solid 0;
+    border-radius: 15pt ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2%;
+    min-height: 82%;
+    max-height: 82%;
+    overflow: auto;
+
 }
 
 #wikiTitle{
-    background-color: rgba(49,165,159,1);
-    padding-top: 0.5%;
+
+    padding-top: 1%;
     padding-bottom: 0.5%;
-    color: white;
-    font-family: "Segoe UI Light" !important;
+    color: #ffffff;
+    font-family: "Segoe UI " !important;
     font-style: normal;
     font-size: 26pt;
 }
 
 #tabellenPlatz{
     clear: both;
-    height: 85%;
-    width: 78% ;
-    max-width: 78%;
-    margin: 3%;
-    margin-right: 7%;
-    background: rgba(0,0,0,.6);
+    height: 100%;
+    width: 100% ;
+    max-width: 100%;
+    background: transparent;
     float: right;
     z-index: 1;
-    border-radius: 50pt;
     overflow: auto;
     scroll-behavior: auto;
 }
@@ -103,4 +112,12 @@
 .dt-table-link-border:hover{
     color: black;
     background-color: rgba(255,255,255,0.5);
+}
+
+#link_to_Antrag{
+    color: #000000;
+    border: solid 0 #ffffff;
+    border-radius: 5pt;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 3pt;
 }
