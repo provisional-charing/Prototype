@@ -647,7 +647,6 @@
 
               var num = document.getElementById('mortalitaet').value;
 
-
               var where = "MORTALITY < " + num + " AND MORTALITY > 0";
 
               var newOverlay = new google.maps.FusionTablesLayer({
@@ -695,11 +694,11 @@
               return $.ajax({
 
                   type: "POST",
-                  url: "/provinces/index",
+                  url: "/provinces/matches",
+                  data: {max: num},
                   success: function(data){
 
                       alert(data);
-                      var rueckgabeTupel = [];
                       var  list = JSON.parse(data);
 
                       return list;
