@@ -14,8 +14,8 @@ class ProvincesController < ApplicationController
   end
 
   # ids deefine which should be returned
-  def matching_indices(max)
-    ids = RegionLethality.get_regions(max)
+  def matching_indices
+    ids = RegionLethality.get_regions(params[:max])
     @provinces = Province.where(id: ids)
 
     respond_to do |format|
