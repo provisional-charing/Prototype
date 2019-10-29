@@ -11,15 +11,15 @@
   <ul>
       <% if user_signed_in? %>
         <% if current_user.admin? %>
-          <li id="menuLink"><%= link_to "Users", admin_users_path %></li>
+          <li><%= link_to "Users", admin_users_path %></li>
           <li><%= image_tag "main.png" , size: "32x32"%><%= link_to "Home", "/main" %></li>
           <li><%= image_tag "impfpass.png" , size: "32x32"%><%= link_to "Impfungen", "/impfpass" %></li>
-          <li id="menuLink"><%= link_to "Patienten Impfungen", vaccination_cards_path %></li>
+          <li><%= link_to "Patienten Impfungen", vaccination_cards_path %></li>
           <li><%= image_tag "Map.png" , size: "32x32"%><%= link_to "Weltkarte", "/world" %></li>
-          <li id="menuLink"><%= link_to "Lethalität", "/region_lethalities" %></li>
+          <li><%= link_to "Lethalität", "/region_lethalities" %></li>
           <li><%= image_tag "Kompendium.png" , size: "32x32"%><%= link_to "Kompendium", "/wikiMain" %></li>
           <li><%= image_tag "projects.png" , size: "32x32"%><%= link_to "soziale Projekte", "/socialProjects" %></li>
-          <li id="menuLink"><%= link_to "Krankheiten", diseases_path %></li>
+          <li><%= link_to "Krankheiten", diseases_path %></li>
           <li><%= image_tag "notice.png" , size: "32x32"%><%= link_to "Notizen", "/note" %></li>
           <li><%= image_tag "logoutIcon.png" , size: "32x32"%><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
 
@@ -27,9 +27,9 @@
             <li> <%= image_tag "profile.png" , size: "32x32"%> <%= link_to "Accountinfo", "/accinfo" %></li>
             <li><%= image_tag "main.png" , size: "32x32"%><%= link_to "Home", "/main" %></li>
             <li><%= image_tag "impfpass.png" , size: "32x32"%><%= link_to "Impfungen", "/impfpass" %></li>
-          <li id="menuLink"><%= link_to "Patienten Impfungen", vaccination_cards_path %></li>
+          <li><%= link_to "Patienten Impfungen", vaccination_cards_path %></li>
             <li><%= image_tag "Map.png" , size: "32x32"%><%= link_to "Weltkarte", "/world" %></li>
-          <li id="menuLink"><%= link_to "Lethalität", "/region_lethalities" %></li>
+          <li><%= link_to "Lethalität", "/region_lethalities" %></li>
             <li><%= image_tag "Kompendium.png" , size: "32x32"%><%= link_to "Kompendium", "/wikiMain" %></li>
             <li><%= image_tag "projects.png" , size: "32x32"%><%= link_to "soziale Projekte", "/socialProjects" %></li>
             <li><%= image_tag "notice.png" , size: "32x32"%><%= link_to "Notizen", "/note" %></li>
