@@ -11,28 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="editDiseaseBox">
     <%= f.label :name %><br />
-    <%= f.text_area :name %>
+    <%= f.text_area :name , class: "fieldDisease"%>
   </div>
-  <div class="field">
+  <div class="editDiseaseBox">
     <%= f.label :what %><br/>
-    <%= f.text_area :what %>
+    <%= f.text_area :what, class: "fieldDisease"%>
   </div>
-  <div class="field">
+  <div class="editDiseaseBox">
     <%= f.label :infection %><br/>
-    <%= f.text_area :infection %>
+    <%= f.text_area :infection , class: "fieldDisease"%>
   </div>
-  <div class="field">
+  <div class="editDiseaseBox">
     <%= f.label :symptom %><br/>
-    <%= f.text_area :symptom %>
+    <%= f.text_area :symptom , class: "fieldDisease"%>
   </div>
-  <div class="field">
+  <div class="editDiseaseBox">
     <%= f.label :counteraction %><br/>
-    <%= f.text_area :counteraction %>
+    <%= f.text_area :counteraction , class: "fieldDisease"%>
   </div>
 
-  <div class="actions">
+  <div class="actionsDisease">
     <%= f.submit %>
   </div>
 <% end %>

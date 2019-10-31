@@ -450,3 +450,16 @@ padding: 0;
 
 }
 
+.adminEditPages{
+   margin: 5%;
+}
+
+.editDiseaseBox, .actionsDisease{
+    margin-bottom: 20pt;
+}
+
+.fieldDisease{
+
+    width: 500pt;
+    height: 200pt;
+}

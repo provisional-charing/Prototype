@@ -32,7 +32,7 @@
 }
 
 #tabelleSI th{
-    border: solid black 0;
+    border: solid black 0.1pt;
     background: #03AC13;
     padding: 1%;
     color: #000000;
@@ -40,7 +40,7 @@
 }
 
 #tabelleSI td {
-    border: white solid;
+    border: #000000 solid;
     border-width:  0px 1px 1px 1px;
     padding: 1%;
     color: #000000;

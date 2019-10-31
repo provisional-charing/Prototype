@@ -1,6 +1,10 @@
+<div class="adminEditPages">
 <h1>Editing Vaccination Card</h1>
 
 <%= render 'form', vaccination_card: @vaccination_card %>
 
 <%= link_to 'Show', @vaccination_card %> |
 <%= link_to 'Back', vaccination_cards_path %>
+</div>
+<%= render partial: 'pages/newsline'%>
+<%= render partial: 'pages/leftsidepart'%>

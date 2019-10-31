@@ -1,8 +1,10 @@
+
+<div class="adminEditPages">
 <p id="notice"><%= notice %></p>
 
 <h1>Vaccination Cards</h1>
 
-<table>
+<table id="tabelleSI">
   <thead>
     <tr>
       <th>Vaccination</th>
@@ -45,3 +47,6 @@
 <br>
 
 <%= link_to 'New Vaccination Card', new_vaccination_card_path %>
+</div>
+<%= render partial: 'pages/newsline'%>
+<%= render partial: 'pages/leftsidepart'%>

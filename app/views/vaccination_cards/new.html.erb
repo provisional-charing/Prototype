@@ -1,8 +1,6 @@
-<div id="gesamtesFenster">
-  <%= image_tag "impfpassBackground.jpg", class: "testIcon" %>
-</div>
 
-<h1 style="color: white">Add Entry to Vaccination Card</h1>
+<div class="adminEditPages">
+<h1 style="color: #000000">Add Entry to Vaccination Card</h1>
 
 
 <%= form_for @vaccination_card do |f| %>
@@ -26,3 +24,6 @@
 <%#= render 'form', vaccination_card: @vaccination_card %>
 
 <p><%= link_to 'Back to Vaccination Card', impfpass_path %></p>
+</div>
+<%= render partial: 'pages/newsline'%>
+<%= render partial: 'pages/leftsidepart'%>

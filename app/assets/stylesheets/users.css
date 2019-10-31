@@ -90,9 +90,33 @@
     border: none;
 }
 
-#usertable, #usertable thead tr, #usertable tbody tr{
-    color: white;
-    background-color:#ffffff !important;
+#usertable{
+    border-style: none;
+margin-left: 1.2vw;
+margin-right: 1.2vw;
+margin-top: 1vh;
+margin-bottom: 1vh;
+width: 97%;
+font-family: "Segoe UI Light";
+background-color: transparent;
+
+}
+
+#usertable th{
+    border: solid black 0.1pt;
+    background: #03AC13;
+    padding: 1%;
+    color: #000000;
+    font-weight: bold ;
+}
+
+#usertable td {
+    border: #000000 solid;
+    border-width:  0px 1px 1px 1px;
+    padding: 1%;
+    color: #000000 ;
+    font-weight: bold;
+    text-align: center;
 }
 
 #user_edit_Field{
@@ -102,7 +126,7 @@
 }
 
 .editInput{
-    color: white;
+    color: #000000;
     font-family: "Segoe UI Light";
     font-size: 14pt;
     outline: none;
@@ -114,4 +138,8 @@
     padding: 1%;
     -moz-appearance: textfield;
     -webkit-appearance: textfield;
+}
+
+.dt-table-link{
+    color: black !important;
 }

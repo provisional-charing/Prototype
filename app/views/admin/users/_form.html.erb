@@ -1,14 +1,8 @@
-<div class="image-container" xmlns="http://www.w3.org/1999/html">
-  <%= image_tag "healthcare.png" , size: "2048x1080"  %>
-
-</div>
-
-<div class="verdunkelung">
+<div class="adminEditPages">
 
   <%= render partial: 'pages/leftsidepart'%>
 
-  <div id="tabellenPlatz">
-    <div id="wikiTitle">Editing User</div>
+    <h1>Editing User</h1>
     <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -21,8 +15,8 @@
     </div>
   <% end %>
 
-    <div id="reg">
-      <fieldset id="user_edit_Field">
+
+      <fieldset>
         <table>
           <tr>
             <td class="regAttribut"><%= f.label :user_name, style: "display: inline" %>
@@ -89,9 +83,8 @@
         <div class="dt-table-link-border">
           <%= link_to 'back', admin_users_path, class: "dt-table-link" %>
         </div>
-      <div id="mandatory_fields" style="text-align: center">
+      <div id="mandatory_fields" style="text-align: left">
           <span>Felder mit einem <span class="mandatory_field">*</span> sind Pflichtfelder.</span>
       </div>
     </div>
-  </div>
-</div>
+
